@@ -1,8 +1,10 @@
 <?php
 
 /**
- * This file is included very early. See autoload.files in composer.json and
- * https://getcomposer.org/doc/04-schema.md#files
+ * @file
+ * This file is included very early. See autoload.files in composer.json and.
+ *
+ * Https://getcomposer.org/doc/04-schema.md#files.
  */
 
 use Dotenv\Dotenv;
