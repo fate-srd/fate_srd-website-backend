@@ -1,0 +1,80 @@
+uuid: 60437b51-6a89-4853-8556-830a63f1778a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_fate_books.default
+    - field.field.node.fate_books.comment_node_fate_books
+    - field.field.node.fate_books.field_link
+    - field.field.node.fate_books.field_online
+    - field.field.node.fate_books.field_previous_version_of_fate
+    - field.field.node.fate_books.field_publisher
+    - node.type.fate_books
+  module:
+    - comment
+    - link
+    - options
+    - user
+id: node.fate_books.default
+targetEntityType: node
+bundle: fate_books
+mode: default
+content:
+  comment_node_fate_books:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_link:
+    label: above
+    weight: 3
+    type: link
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    region: content
+  field_online:
+    label: above
+    weight: 6
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_previous_version_of_fate:
+    label: above
+    weight: 5
+    type: list_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_publisher:
+    label: above
+    weight: 1
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  title:
+    label: hidden
+    type: string
+    weight: -5
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  langcode: true

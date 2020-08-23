@@ -1,0 +1,23 @@
+uuid: 14ca3ed8-7909-4622-864f-ed2ea48a9630
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_previous_version_of_fate
+    - node.type.fate_books
+id: node.fate_books.field_previous_version_of_fate
+field_name: field_previous_version_of_fate
+entity_type: node
+bundle: fate_books
+label: 'Previous Version of Fate'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Uses a previous version of Fate'
+  off_label: ''
+field_type: boolean

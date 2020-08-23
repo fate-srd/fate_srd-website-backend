@@ -1,0 +1,18 @@
+uuid: ab574959-2dce-4b60-ac74-03e4183e0d9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.media
+id: node.media.title
+field_name: title
+entity_type: node
+bundle: media
+label: 'Show Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,37 @@
+uuid: 111a9318-6811-4014-8829-75043a78c365
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - recipes_magazin
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - menu-atomic-robo
+      - menu-fate-accelerated
+      - menu-fate-adversary-toolkit
+      - menu-fate-codex
+      - menu-fate-condensed
+      - menu-fate-core
+      - menu-fate-system-toolkit
+      - menu-frontier-spirit
+      - menu-gods-and-monsters
+      - main-menu
+      - menu-odds-ends
+      - menu-sails-full-of-stars
+      - menu-three-rocketeers
+      - menu-venture-city
+      - menu-war-of-ashes
+    parent: 'menu-fate-condensed:0:'
+_core:
+  default_config_hash: BZnlJw3hJuMRsUuvXLHbDxGFo0d2xJ-ThAXqRcgXzUw
+name: Article
+type: article
+description: 'Articles are the the content type used for entering Fate rules pages, e.g. Fate Core, FAE, or the System Toolkit.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

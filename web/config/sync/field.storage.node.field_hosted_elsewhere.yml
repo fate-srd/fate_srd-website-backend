@@ -1,0 +1,18 @@
+uuid: df4f6b7d-87e6-4702-b8b1-53a95951a55d
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_hosted_elsewhere
+field_name: field_hosted_elsewhere
+entity_type: node
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

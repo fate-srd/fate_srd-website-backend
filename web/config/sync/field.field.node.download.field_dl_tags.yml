@@ -1,0 +1,26 @@
+uuid: ecb60a95-ca9e-477b-993e-a6d5a09dc4e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dl_tags
+    - node.type.download
+    - taxonomy.vocabulary.download_tags
+id: node.download.field_dl_tags
+field_name: field_dl_tags
+entity_type: node
+bundle: download
+label: Tags
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      download_tags: download_tags
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

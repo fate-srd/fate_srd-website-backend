@@ -1,0 +1,22 @@
+uuid: 38153528-ea68-4400-82b4-eb2e13b9f4c1
+langcode: en
+status: true
+dependencies: {  }
+id: content_editor
+label: 'Content Editor'
+weight: 3
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'administer menu'
+  - 'create article content'
+  - 'create page content'
+  - 'edit any article content'
+  - 'edit any page content'
+  - 'edit own article content'
+  - 'edit own page content'
+  - 'use text format unfiltered_html'
+  - 'view own unpublished content'
+  - 'view revisions'
+  - 'view the administration theme'

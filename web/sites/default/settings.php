@@ -802,4 +802,4 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['config_sync_directory'] = 'profiles/contrib/contenta_jsonapi/config/sync';
+$settings['config_sync_directory'] = 'config/sync';
