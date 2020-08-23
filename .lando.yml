@@ -2,3 +2,13 @@ name: fate8
 recipe: drupal8
 config:
   webroot: web
+# Create Drupal 7 database service, consider adding
+# https://www.drupal.org/docs/upgrading-drupal/upgrade-using-drush
+services:
+  d7db:
+    type: mysql
+    creds:
+      user: drupal7
+      password: drupal7
+      database: drupal7
+    portforward: true
