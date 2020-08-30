@@ -1,4 +1,4 @@
-name: fate8
+name: fate-srd-backend
 recipe: drupal8
 config:
   webroot: web
