@@ -1,0 +1,44 @@
+<?php
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Session\AccountInterface;
+
+/**
+ * Implements hook_ENTITY_TYPE_access().
+ */
+function fatesrd_menu_link_content_access(EntityInterface $entity, $operation, AccountInterface $account) {
+  if ($operation == 'view') {
+    // Check whether user has permission to access menu.
+    if ($account->hasPermission('administer menu')) {
+      return AccessResult::allowed()
+        ->cachePerPermissions()
+        ->addCacheableDependency($entity);
+    }
+    // If menu link is internal, and user has access, grant view access to the menu link.
+    if (($url_object = $entity->getUrlObject()) && ($url_object->isRouted())) {
+      $link_access = \Drupal::accessManager()->checkNamedRoute($url_object->getRouteName(), $url_object->getRouteParameters(), $account, TRUE);
+      if ($link_access->isAllowed()) {
+        return AccessResult::allowed()
+          ->cachePerPermissions()
+          ->addCacheableDependency($entity);
+      }
+    }
+    // Grant view access to external links.
+    elseif ($url_object->isExternal()) {
+      return AccessResult::allowed()
+        ->cachePerPermissions()
+        ->addCacheableDependency($entity);
+    }
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_jsonapi_ENTITY_TYPE_filter_access() for 'menu_link_content'.
+ */
+function fatesrd_jsonapi_menu_link_content_filter_access(EntityTypeInterface $entity_type, AccountInterface $account) {
+  return ([
+    JSONAPI_FILTER_AMONG_ALL => AccessResult::allowed(),
+  ]);
+}
