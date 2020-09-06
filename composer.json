@@ -39,7 +39,8 @@
     "drupal/webform": "^5.19",
     "drupal/migrate_tools": "^5.0",
     "drupal/migrate_upgrade": "^3",
-    "drupal/gatsby": "^1.0@RC"
+    "drupal/gatsby": "^1.0@RC",
+    "drupal/graphql": "^3.0"
   },
   "require-dev": {
     "webflo/drupal-core-require-dev": "^8.8",
