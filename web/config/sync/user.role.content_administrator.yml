@@ -11,5 +11,6 @@ permissions:
   - 'access user profiles'
   - 'administer media'
   - 'administer media types'
+  - 'administer menu'
   - 'administer taxonomy'
   - 'bypass node access'

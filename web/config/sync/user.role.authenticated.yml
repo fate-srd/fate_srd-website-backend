@@ -8,7 +8,17 @@ weight: 1
 is_admin: false
 permissions:
   - 'access content'
+  - 'access openapi api docs'
+  - 'administer gatsby log entity entities'
+  - 'administer menu'
+  - 'administer rest resources'
+  - 'bypass graphql field security'
   - 'diff view changes'
+  - 'restful get menu_tree'
   - 'search Google CSE'
   - 'search content'
+  - 'sync gatsby fastbuild log entities'
+  - 'use graphql explorer'
+  - 'use graphql voyager'
   - 'use text format unfiltered_html'
+  - 'view gatsby log entity entities'

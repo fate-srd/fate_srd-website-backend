@@ -9,5 +9,6 @@ is_admin: null
 permissions:
   - 'access openapi api docs'
   - 'access user profiles'
+  - 'administer menu'
   - 'administer simple_oauth entities'
   - 'grant simple_oauth codes'

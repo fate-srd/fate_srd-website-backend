@@ -1,40 +1,69 @@
-uuid: 72a2118c-ff66-4561-b07c-efd8de6ec9f6
+uuid: 48e842c7-9ff1-4eee-b9ec-4464092e2fc1
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - recipes_magazin
   module:
+    - jsonapi_defaults
     - menu_link_content
-_core:
-  default_config_hash: GO1K8Sz--tIiJx-uYVrNtwKfGdYB8Xl2e4UmQWjFZJo
+third_party_settings:
+  jsonapi_defaults:
+    page_limit: 50
 id: menu_link_content--menu_link_content
 disabled: false
-path: menuLinks
-resourceType: menuLinks
+path: menu_link_content/menu_link_content
+resourceType: menu_link_content--menu_link_content
 resourceFields:
   id:
     fieldName: id
-    publicName: internalId
+    publicName: id
     enhancer:
       id: ''
     disabled: false
   uuid:
-    disabled: true
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
+    disabled: false
+  revision_id:
+    fieldName: revision_id
+    publicName: revision_id
+    enhancer:
+      id: ''
+    disabled: false
   langcode:
-    disabled: true
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
+    disabled: false
   bundle:
     fieldName: bundle
     publicName: bundle
+    enhancer:
+      id: ''
+    disabled: false
+  revision_created:
+    fieldName: revision_created
+    publicName: revision_created
+    enhancer:
+      id: ''
+    disabled: false
+  revision_user:
+    fieldName: revision_user
+    publicName: revision_user
+    enhancer:
+      id: ''
+    disabled: false
+  revision_log_message:
+    fieldName: revision_log_message
+    publicName: revision_log_message
+    enhancer:
+      id: ''
+    disabled: false
+  enabled:
+    fieldName: enabled
+    publicName: enabled
     enhancer:
       id: ''
     disabled: false
@@ -52,7 +81,7 @@ resourceFields:
     disabled: false
   menu_name:
     fieldName: menu_name
-    publicName: menuInternalId
+    publicName: menu_name
     enhancer:
       id: ''
     disabled: false
@@ -60,22 +89,20 @@ resourceFields:
     fieldName: link
     publicName: link
     enhancer:
-      id: nested
-      settings:
-        path: uri
+      id: uuid_link
     disabled: false
   external:
     fieldName: external
-    publicName: isExternal
+    publicName: external
     enhancer:
       id: ''
     disabled: false
   rediscover:
-    disabled: true
     fieldName: rediscover
     publicName: rediscover
     enhancer:
       id: ''
+    disabled: false
   weight:
     fieldName: weight
     publicName: weight
@@ -84,33 +111,37 @@ resourceFields:
     disabled: false
   expanded:
     fieldName: expanded
-    publicName: isExpanded
-    enhancer:
-      id: ''
-    disabled: false
-  enabled:
-    fieldName: enabled
-    publicName: isEnabled
+    publicName: expanded
     enhancer:
       id: ''
     disabled: false
   parent:
     fieldName: parent
-    publicName: parentIs
+    publicName: parent
     enhancer:
       id: ''
     disabled: false
   changed:
     fieldName: changed
-    publicName: changedAt
+    publicName: changed
     enhancer:
-      id: date_time
-      settings:
-        dateTimeFormat: 'Y-m-d\TH:i:sO'
+      id: ''
     disabled: false
   default_langcode:
-    disabled: true
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
+    disabled: false
+  revision_default:
+    fieldName: revision_default
+    publicName: revision_default
+    enhancer:
+      id: ''
+    disabled: false
+  revision_translation_affected:
+    fieldName: revision_translation_affected
+    publicName: revision_translation_affected
+    enhancer:
+      id: ''
+    disabled: false

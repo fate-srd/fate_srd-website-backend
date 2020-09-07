@@ -1,0 +1,278 @@
+diff --git a/core/modules/jsonapi/tests/src/Functional/ShortcutTest.php b/core/modules/jsonapi/tests/src/Functional/ShortcutTest.php
+index 925bef4738..2f578b16fa 100644
+--- a/core/modules/jsonapi/tests/src/Functional/ShortcutTest.php
++++ b/core/modules/jsonapi/tests/src/Functional/ShortcutTest.php
+@@ -81,6 +81,8 @@ protected function createEntity() {
+    */
+   protected function getExpectedDocument() {
+     $self_url = Url::fromUri('base:/jsonapi/shortcut/default/' . $this->entity->uuid())->setAbsolute()->toString(TRUE)->getGeneratedUrl();
++    $uri = 'internal:/user/logout';
++    $url = Url::fromUri($uri);
+     return [
+       'jsonapi' => [
+         'meta' => [
+@@ -102,7 +104,8 @@ protected function getExpectedDocument() {
+         'attributes' => [
+           'title' => 'Comments',
+           'link' => [
+-            'uri' => 'internal:/user/logout',
++            'uri' => $uri,
++            'url' => $url->toString(),
+             'title' => NULL,
+             'options' => [],
+           ],
+diff --git a/core/modules/link/src/Plugin/DataType/LinkUrlComputed.php b/core/modules/link/src/Plugin/DataType/LinkUrlComputed.php
+new file mode 100644
+index 0000000000..330f36bf0a
+--- /dev/null
++++ b/core/modules/link/src/Plugin/DataType/LinkUrlComputed.php
+@@ -0,0 +1,80 @@
++<?php
++
++namespace Drupal\link\Plugin\DataType;
++
++use Drupal\Component\Utility\UrlHelper;
++use Drupal\Core\Cache\CacheableDependencyInterface;
++use Drupal\Core\TypedData\Plugin\DataType\Uri;
++use Drupal\Core\Url;
++
++/**
++ * Defines a data type for a link URL.
++ *
++ * @DataType(
++ *   id = "link_url",
++ *   label = @Translation("Link URL")
++ * )
++ */
++class LinkUrlComputed extends Uri implements CacheableDependencyInterface  {
++
++  /**
++   * The generated URL.
++   *
++   * @var \Drupal\Core\GeneratedUrl|null
++   */
++  protected $processed = NULL;
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getValue() {
++    if ($this->processed !== NULL) {
++      return $this->processed->getGeneratedUrl();
++    }
++    /** @var \Drupal\link\Plugin\Field\FieldType\LinkItem $item */
++    $item = $this->getParent();
++    $this->processed = $item->getUrl()->toString(TRUE);
++
++    return $this->processed->getGeneratedUrl();
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function setValue($value, $notify = TRUE) {
++    if (!empty($value)) {
++      $parsed = UrlHelper::parse($value);
++      $url = Url::fromUri($parsed['path'], ['query' => $parsed['query'], 'fragment' => $parsed['fragment']]);
++      $this->processed = $url->toString(TRUE);
++    }
++    // Notify the parent of any changes.
++    if ($notify && isset($this->parent)) {
++      $this->parent->onChange($this->name);
++    }
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getCacheTags() {
++    $this->getValue();
++    return $this->processed->getCacheTags();
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getCacheContexts() {
++    $this->getValue();
++    return $this->processed->getCacheContexts();
++  }
++
++  /**
++   * {@inheritdoc}
++   */
++  public function getCacheMaxAge() {
++    $this->getValue();
++    return $this->processed->getCacheMaxAge();
++  }
++
++}
+diff --git a/core/modules/link/src/Plugin/Field/FieldType/LinkItem.php b/core/modules/link/src/Plugin/Field/FieldType/LinkItem.php
+index 90585a66a0..1932a8e60d 100644
+--- a/core/modules/link/src/Plugin/Field/FieldType/LinkItem.php
++++ b/core/modules/link/src/Plugin/Field/FieldType/LinkItem.php
+@@ -3,6 +3,7 @@
+ namespace Drupal\link\Plugin\Field\FieldType;
+ 
+ use Drupal\Component\Utility\Random;
++use Drupal\Component\Utility\UrlHelper;
+ use Drupal\Core\Field\FieldDefinitionInterface;
+ use Drupal\Core\Field\FieldItemBase;
+ use Drupal\Core\Field\FieldStorageDefinitionInterface;
+@@ -43,6 +44,13 @@ public static function propertyDefinitions(FieldStorageDefinitionInterface $fiel
+     $properties['uri'] = DataDefinition::create('uri')
+       ->setLabel(t('URI'));
+ 
++    $properties['url'] = DataDefinition::create('link_url')
++      ->setLabel(t('URL'))
++      ->setDescription(t('The processed URL for this link that can e.g. be used in in href attributes.'))
++      ->setComputed(TRUE)
++      ->setInternal(FALSE)
++      ->setReadOnly(TRUE);
++
+     $properties['title'] = DataDefinition::create('string')
+       ->setLabel(t('Link text'));
+ 
+@@ -172,6 +180,23 @@ public function getUrl() {
+     return Url::fromUri($this->uri, (array) $this->options);
+   }
+ 
++  /**
++   * {@inheritdoc}
++   */
++  public function onChange($property_name, $notify = TRUE) {
++    // Make sure that the link item values can be kept in sync with computed
++    // property url.
++    if ($property_name == 'url') {
++      $property = $this->get('url');
++      if ($url = $property->getValue()) {
++        $parsed = UrlHelper::parse($url);
++        $this->writePropertyValue('uri', $parsed['path']);
++        $this->writePropertyValue('options', ['query' => $parsed['query'], 'fragment' => $parsed['fragment']]);
++      }
++    }
++    parent::onChange($property_name, $notify);
++  }
++
+   /**
+    * {@inheritdoc}
+    */
+diff --git a/core/modules/link/tests/src/Kernel/LinkItemTest.php b/core/modules/link/tests/src/Kernel/LinkItemTest.php
+index b2bd2cf4da..73605a06a8 100644
+--- a/core/modules/link/tests/src/Kernel/LinkItemTest.php
++++ b/core/modules/link/tests/src/Kernel/LinkItemTest.php
+@@ -86,6 +86,7 @@ public function testLinkItem() {
+       ],
+       'external' => TRUE,
+     ], $entity->field_test->first()->getUrl()->getOptions());
++    $this->assertEquals($url, $entity->field_test->url);
+     $entity->name->value = $this->randomMachineName();
+     $entity->save();
+ 
+@@ -94,6 +95,7 @@ public function testLinkItem() {
+     $entity = EntityTest::load($id);
+     $this->assertTrue($entity->field_test instanceof FieldItemListInterface, 'Field implements interface.');
+     $this->assertTrue($entity->field_test[0] instanceof FieldItemInterface, 'Field item implements interface.');
++    $this->assertEquals($url, $entity->field_test->url);
+     $this->assertEqual($entity->field_test->uri, $parsed_url['path']);
+     $this->assertEqual($entity->field_test[0]->uri, $parsed_url['path']);
+     $this->assertEqual($entity->field_test->title, $title);
+@@ -172,6 +174,31 @@ public function testLinkItem() {
+     $entity->field_test_external->generateSampleItems();
+     $entity->field_test_internal->generateSampleItems();
+     $this->entityValidateAndSave($entity);
++
++    // Test setting up computed property also sets up other values.
++    $entity = EntityTest::create();
++    $url = 'https://www.drupal.org?test_param=test_value#top';
++    $parsed_url = UrlHelper::parse($url);
++    $entity->field_test->url = $url;
++    $this->assertEquals($parsed_url['path'], $entity->field_test->uri);
++    $this->assertEquals([
++      'query' => $parsed_url['query'],
++      'fragment' => $parsed_url['fragment'],
++      'external' => TRUE,
++    ], $entity->field_test->first()->getUrl()->getOptions());
++    $entity->name->value = $this->randomMachineName();
++    $entity->save();
++
++    // Verify that the field value is changed.
++    $id = $entity->id();
++    $entity = EntityTest::load($id);
++    $this->assertTrue($entity->field_test instanceof FieldItemListInterface, 'Field implements interface.');
++    $this->assertTrue($entity->field_test[0] instanceof FieldItemInterface, 'Field item implements interface.');
++    $this->assertEquals($url, $entity->field_test->url);
++    $this->assertEqual($entity->field_test->uri, $parsed_url['path']);
++    $this->assertEqual($entity->field_test[0]->uri, $parsed_url['path']);
++    $this->assertEqual($entity->field_test->options['query'], $parsed_url['query']);
++    $this->assertEqual($entity->field_test->options['fragment'], $parsed_url['fragment']);
+   }
+ 
+   /**
+diff --git a/core/modules/menu_link_content/tests/src/Functional/Rest/MenuLinkContentResourceTestBase.php b/core/modules/menu_link_content/tests/src/Functional/Rest/MenuLinkContentResourceTestBase.php
+index 932fae92ed..ff5c5c64b7 100644
+--- a/core/modules/menu_link_content/tests/src/Functional/Rest/MenuLinkContentResourceTestBase.php
++++ b/core/modules/menu_link_content/tests/src/Functional/Rest/MenuLinkContentResourceTestBase.php
+@@ -62,6 +62,7 @@ protected function createEntity() {
+       'description' => 'Llama Gabilondo',
+       'link' => [
+         'uri' => 'entity:user/1',
++        'url' => '/user/1',
+         'options' => [
+           'fragment' => 'a-fragment',
+           'attributes' => [
+@@ -90,6 +91,7 @@ protected function getNormalizedPostEntity() {
+       'link' => [
+         [
+           'uri' => 'http://www.urbandictionary.com/define.php?term=drama%20llama',
++          'url' => 'http://www.urbandictionary.com/define.php?term=drama%20llama',
+           'options' => [
+             'fragment' => 'a-fragment',
+             'attributes' => [
+@@ -134,6 +136,7 @@ protected function getExpectedNormalizedEntity() {
+       'link' => [
+         [
+           'uri' => 'entity:user/1',
++          'url' => '/user/1',
+           'title' => NULL,
+           'options' => [
+             'fragment' => 'a-fragment',
+diff --git a/core/modules/shortcut/tests/src/Functional/Rest/ShortcutResourceTestBase.php b/core/modules/shortcut/tests/src/Functional/Rest/ShortcutResourceTestBase.php
+index 1f588a2500..459295084f 100644
+--- a/core/modules/shortcut/tests/src/Functional/Rest/ShortcutResourceTestBase.php
++++ b/core/modules/shortcut/tests/src/Functional/Rest/ShortcutResourceTestBase.php
+@@ -2,6 +2,7 @@
+ 
+ namespace Drupal\Tests\shortcut\Functional\Rest;
+ 
++use Drupal\Core\Url;
+ use Drupal\shortcut\Entity\Shortcut;
+ use Drupal\shortcut\Entity\ShortcutSet;
+ use Drupal\Tests\rest\Functional\EntityResource\EntityResourceTestBase;
+@@ -72,6 +73,11 @@ protected function createEntity() {
+    * {@inheritdoc}
+    */
+   protected function getExpectedNormalizedEntity() {
++    $uri = 'internal:/admin/content/comment';
++    $uri_options = [
++      'fragment' => 'new',
++    ];
++    $url = Url::fromUri($uri, $uri_options);
+     return [
+       'uuid' => [
+         [
+@@ -97,11 +103,10 @@ protected function getExpectedNormalizedEntity() {
+       ],
+       'link' => [
+         [
+-          'uri' => 'internal:/admin/content/comment',
++          'uri' => $uri,
++          'url' => $url->toString(),
+           'title' => NULL,
+-          'options' => [
+-            'fragment' => 'new',
+-          ],
++          'options' => $uri_options,
+         ],
+       ],
+       'weight' => [
