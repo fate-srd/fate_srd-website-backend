@@ -1,0 +1,21 @@
+diff --git a/pathologic.module b/pathologic.module
+index bb4654a..eb35c5c 100644
+--- a/pathologic.module
++++ b/pathologic.module
+@@ -337,6 +337,7 @@ function _pathologic_replace($matches) {
+     'path' => $parts['path'],
+     'options' => [
+       'query' => $parts['qparts'],
++      'path_processing' => TRUE,
+       'fragment' => isset($parts['fragment']) ? $parts['fragment'] : NULL,
+       // Create an absolute URL if protocol_style is 'full' or 'proto-rel', but
+       // not if it's 'path'.
+@@ -370,7 +371,7 @@ function _pathologic_replace($matches) {
+   }
+   else {
+     try {
+-      $url = Url::fromUri('base://' . $url_params['path'], $url_params['options'])
++      $url = Url::fromUri('base:/' . $url_params['path'], $url_params['options'])
+         ->toString();
+     }
+     catch (\Exception $e) {
