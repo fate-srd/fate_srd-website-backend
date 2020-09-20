@@ -12,3 +12,4 @@ permissions:
   - 'administer menu'
   - 'administer simple_oauth entities'
   - 'grant simple_oauth codes'
+  - 'use text format full_html'

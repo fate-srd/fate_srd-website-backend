@@ -16,6 +16,7 @@ permissions:
   - 'edit any page content'
   - 'edit own article content'
   - 'edit own page content'
+  - 'use text format full_html'
   - 'use text format unfiltered_html'
   - 'view own unpublished content'
   - 'view revisions'

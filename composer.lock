@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "882b0fc3a2c858cf4559874db9092781",
+    "content-hash": "3e5f5f4ca773e93b3a61fae5694dd5e6",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1118,12 +1118,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/contentacms/contenta_jsonapi.git",
-                "reference": "2c1dbbb8311bf4e493b1fd145f12edbb0953364b"
+                "reference": "b7e6b90cd4f224cd2d9f3c92c9f3d5eb5bb7cfdf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/contentacms/contenta_jsonapi/zipball/2c1dbbb8311bf4e493b1fd145f12edbb0953364b",
-                "reference": "2c1dbbb8311bf4e493b1fd145f12edbb0953364b",
+                "url": "https://api.github.com/repos/contentacms/contenta_jsonapi/zipball/b7e6b90cd4f224cd2d9f3c92c9f3d5eb5bb7cfdf",
+                "reference": "b7e6b90cd4f224cd2d9f3c92c9f3d5eb5bb7cfdf",
                 "shasum": ""
             },
             "require": {
@@ -1133,13 +1133,13 @@
                 "drupal/consumers": "^1.8",
                 "drupal/contentajs": "^1.0@beta",
                 "drupal/core": "^8.8",
-                "drupal/decoupled_router": "^1.1",
+                "drupal/decoupled_router": "^2",
                 "drupal/environment_indicator": "^3.7",
                 "drupal/image_widget_crop": "^2.1",
                 "drupal/inline_entity_form": "^1.0@beta",
-                "drupal/jsonapi_boost": "^1.0",
+                "drupal/jsonapi_boost": "^2",
                 "drupal/jsonapi_extras": "^3.13",
-                "drupal/jsonrpc": "^1.0@beta",
+                "drupal/jsonrpc": "^2",
                 "drupal/material_admin": "^1.0@alpha",
                 "drupal/openapi": "^2.0@rc",
                 "drupal/openapi_jsonapi": "^2.0@rc",
@@ -1189,7 +1189,7 @@
             "license": [
                 "GPL-2.0-or-later"
             ],
-            "time": "2020-07-15T14:16:08+00:00"
+            "time": "2020-09-20T07:16:52+00:00"
         },
         {
             "name": "cweagans/composer-patches",
@@ -2110,6 +2110,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Composer Plugin for updating the Drupal scaffold files when using drupal/core",
+            "abandoned": "drupal / core-composer-scaffold",
             "time": "2019-03-30T10:41:38+00:00"
         },
         {
@@ -2397,16 +2398,16 @@
         },
         {
             "name": "drupal/core",
-            "version": "8.9.5",
+            "version": "8.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drupal/core.git",
-                "reference": "c9b9643663b80f02c038f9dea15b8717a22c3339"
+                "reference": "caf4e756d31dfb0c2e52cd0748e900efe4b57766"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drupal/core/zipball/c9b9643663b80f02c038f9dea15b8717a22c3339",
-                "reference": "c9b9643663b80f02c038f9dea15b8717a22c3339",
+                "url": "https://api.github.com/repos/drupal/core/zipball/caf4e756d31dfb0c2e52cd0748e900efe4b57766",
+                "reference": "caf4e756d31dfb0c2e52cd0748e900efe4b57766",
                 "shasum": ""
             },
             "require": {
@@ -2627,7 +2628,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Drupal is an open source content management platform powering millions of websites and applications.",
-            "time": "2020-09-03T21:07:45+00:00"
+            "time": "2020-09-16T11:22:21+00:00"
         },
         {
             "name": "drupal/crop",
@@ -2778,17 +2779,17 @@
         },
         {
             "name": "drupal/decoupled_router",
-            "version": "1.12.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/decoupled_router.git",
-                "reference": "8.x-1.12"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/decoupled_router-8.x-1.12.zip",
-                "reference": "8.x-1.12",
-                "shasum": "af48670151e66e6d73b9f57b4ed79c28f6689235"
+                "url": "https://ftp.drupal.org/files/projects/decoupled_router-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "9ca95f68b1ebd889e80ca3aa73afbfb47fd6a3f6"
             },
             "require": {
                 "drupal/core": "^8.8 || ^9"
@@ -2799,8 +2800,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.12",
-                    "datestamp": "1597127266",
+                    "version": "2.0.1",
+                    "datestamp": "1600586098",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3233,28 +3234,28 @@
         },
         {
             "name": "drupal/jsonapi_boost",
-            "version": "1.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jsonapi_boost.git",
-                "reference": "8.x-1.0"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jsonapi_boost-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "ea0a5d96deb89079e53bf9a535bf32971b43159a"
+                "url": "https://ftp.drupal.org/files/projects/jsonapi_boost-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "2635e54f5e33fcd4744296bfd1ff2fe79abc2e7f"
             },
             "require": {
-                "drupal/core": "^8",
+                "drupal/core": "^8 || ^9",
                 "drupal/jsonapi_extras": "^3.0",
                 "drupal/warmer": "*"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1585172387",
+                    "version": "2.0.1",
+                    "datestamp": "1600581498",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3448,30 +3449,30 @@
         },
         {
             "name": "drupal/jsonrpc",
-            "version": "1.0.0-beta6",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/jsonrpc.git",
-                "reference": "8.x-1.0-beta6"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/jsonrpc-8.x-1.0-beta6.zip",
-                "reference": "8.x-1.0-beta6",
-                "shasum": "acc009461d1affd069225f5e5bcba2151d72b463"
+                "url": "https://ftp.drupal.org/files/projects/jsonrpc-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "6dab413469dd4bb39aa3d0ba0e48b7c42056664f"
             },
             "require": {
-                "drupal/core": "~8.0",
+                "drupal/core": "^8 || ^9",
                 "e0ipso/shaper": "^1.2.1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0-beta6",
-                    "datestamp": "1552196884",
+                    "version": "2.0.1",
+                    "datestamp": "1600582806",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Beta releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -3602,6 +3603,50 @@
             "homepage": "https://www.drupal.org/project/material_admin",
             "support": {
                 "source": "https://git.drupalcode.org/project/material_admin"
+            }
+        },
+        {
+            "name": "drupal/menu_normalizer",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/menu_normalizer.git",
+                "reference": "2.0.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/menu_normalizer-2.0.0.zip",
+                "reference": "2.0.0",
+                "shasum": "5fd034e1e948c9887670b82a8f1d0692b73889ce"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "2.0.0",
+                    "datestamp": "1591234904",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "davidwbarratt",
+                    "homepage": "https://www.drupal.org/user/411675"
+                }
+            ],
+            "description": "Normalizer for Menu objects",
+            "homepage": "https://www.drupal.org/project/menu_normalizer",
+            "support": {
+                "source": "https://git.drupalcode.org/project/menu_normalizer"
             }
         },
         {
@@ -5083,16 +5128,16 @@
         },
         {
             "name": "egulias/email-validator",
-            "version": "2.1.20",
+            "version": "2.1.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/egulias/EmailValidator.git",
-                "reference": "f46887bc48db66c7f38f668eb7d6ae54583617ff"
+                "reference": "563d0cdde5d862235ffe24a158497f4d490191b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/f46887bc48db66c7f38f668eb7d6ae54583617ff",
-                "reference": "f46887bc48db66c7f38f668eb7d6ae54583617ff",
+                "url": "https://api.github.com/repos/egulias/EmailValidator/zipball/563d0cdde5d862235ffe24a158497f4d490191b5",
+                "reference": "563d0cdde5d862235ffe24a158497f4d490191b5",
                 "shasum": ""
             },
             "require": {
@@ -5137,7 +5182,7 @@
                 "validation",
                 "validator"
             ],
-            "time": "2020-09-06T13:44:32+00:00"
+            "time": "2020-09-19T14:37:56+00:00"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -6275,16 +6320,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.9.1",
+            "version": "v4.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28"
+                "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/88e519766fc58bd46b8265561fb79b54e2e00b28",
-                "reference": "88e519766fc58bd46b8265561fb79b54e2e00b28",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/1c13d05035deff45f1230ca68bd7d74d621762d9",
+                "reference": "1c13d05035deff45f1230ca68bd7d74d621762d9",
                 "shasum": ""
             },
             "require": {
@@ -6323,7 +6368,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2020-08-30T16:15:20+00:00"
+            "time": "2020-09-19T14:52:48+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -8817,22 +8862,22 @@
         },
         {
             "name": "vipnytt/sitemapparser",
-            "version": "1.1.0",
+            "version": "1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/VIPnytt/SitemapParser.git",
-                "reference": "e793cae01672a14215d35d39fdca50a0854ea498"
+                "reference": "9ce924c22f9d638862ed7b214215890d3a67b2c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/VIPnytt/SitemapParser/zipball/e793cae01672a14215d35d39fdca50a0854ea498",
-                "reference": "e793cae01672a14215d35d39fdca50a0854ea498",
+                "url": "https://api.github.com/repos/VIPnytt/SitemapParser/zipball/9ce924c22f9d638862ed7b214215890d3a67b2c3",
+                "reference": "9ce924c22f9d638862ed7b214215890d3a67b2c3",
                 "shasum": ""
             },
             "require": {
                 "ext-mbstring": "*",
                 "ext-simplexml": "*",
-                "guzzlehttp/guzzle": "^6.0",
+                "guzzlehttp/guzzle": "^6.0 || ^7.0",
                 "lib-libxml": "*",
                 "php": "^5.6 || ^7.0"
             },
@@ -8871,7 +8916,7 @@
                 "sitemaps.org",
                 "xml"
             ],
-            "time": "2019-08-10T15:31:54+00:00"
+            "time": "2020-09-16T16:45:56+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -10647,16 +10692,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "5.2.1",
+            "version": "5.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44"
+                "reference": "069a785b2141f5bcf49f3e353548dc1cce6df556"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/d870572532cd70bc3fab58f2e23ad423c8404c44",
-                "reference": "d870572532cd70bc3fab58f2e23ad423c8404c44",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/069a785b2141f5bcf49f3e353548dc1cce6df556",
+                "reference": "069a785b2141f5bcf49f3e353548dc1cce6df556",
                 "shasum": ""
             },
             "require": {
@@ -10695,20 +10740,20 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2020-08-15T11:14:08+00:00"
+            "time": "2020-09-03T19:13:55+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
-            "version": "1.3.0",
+            "version": "1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "e878a14a65245fbe78f8080eba03b47c3b705651"
+                "reference": "6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/e878a14a65245fbe78f8080eba03b47c3b705651",
-                "reference": "e878a14a65245fbe78f8080eba03b47c3b705651",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0",
+                "reference": "6a467b8989322d92aa1c8bf2bebcc6e5c2ba55c0",
                 "shasum": ""
             },
             "require": {
@@ -10740,7 +10785,7 @@
                 }
             ],
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
-            "time": "2020-06-27T10:12:23+00:00"
+            "time": "2020-09-17T18:55:26+00:00"
         },
         {
             "name": "phpro/grumphp",
@@ -12633,16 +12678,16 @@
         },
         {
             "name": "webflo/drupal-core-require-dev",
-            "version": "8.9.5",
+            "version": "8.9.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webflo/drupal-core-require-dev.git",
-                "reference": "cba16868ce8f2ec422093457f8de9b821a157d2e"
+                "reference": "7777354ef29e3946be329a913d5a19f0179d39d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/cba16868ce8f2ec422093457f8de9b821a157d2e",
-                "reference": "cba16868ce8f2ec422093457f8de9b821a157d2e",
+                "url": "https://api.github.com/repos/webflo/drupal-core-require-dev/zipball/7777354ef29e3946be329a913d5a19f0179d39d5",
+                "reference": "7777354ef29e3946be329a913d5a19f0179d39d5",
                 "shasum": ""
             },
             "require": {
@@ -12651,7 +12696,7 @@
                 "behat/mink-selenium2-driver": "^1.4",
                 "composer/composer": "^1.9.1",
                 "drupal/coder": "^8.3.7",
-                "drupal/core": "8.9.5",
+                "drupal/core": "8.9.6",
                 "jcalderonzumba/gastonjs": "^1.0.2",
                 "jcalderonzumba/mink-phantomjs-driver": "^0.3.1",
                 "justinrainbow/json-schema": "^5.2",
@@ -12674,7 +12719,7 @@
             ],
             "description": "require-dev dependencies from drupal/core",
             "abandoned": "drupal/core-dev",
-            "time": "2020-09-03T21:32:16+00:00"
+            "time": "2020-09-16T18:32:14+00:00"
         }
     ],
     "aliases": [],

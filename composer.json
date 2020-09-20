@@ -3,7 +3,8 @@
   "description": "Project template for Contenta CMS.",
   "type": "project",
   "license": "GPL-2.0-or-later",
-  "authors": [{
+  "authors": [
+    {
       "name": "Mateu Aguiló Bosch",
       "email": "mateu.aguilo.bosch@gmail.com"
     },
@@ -12,10 +13,12 @@
       "email": "dawehner@users.noreply.github.com"
     }
   ],
-  "repositories": [{
-    "type": "composer",
-    "url": "https://packages.drupal.org/8"
-  }],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
   "require": {
     "contentacms/contenta_jsonapi": "dev-8.x-3.x",
     "drupal-composer/drupal-scaffold": "^2.5",
@@ -37,7 +40,8 @@
     "drupal/migrate_tools": "^5.0",
     "drupal/migrate_upgrade": "^3",
     "drupal/gatsby": "^1.0@RC",
-    "drupal/jsonapi_views": "1.x-dev"
+    "drupal/jsonapi_views": "1.x-dev",
+    "drupal/menu_normalizer": "^2.0"
   },
   "require-dev": {
     "webflo/drupal-core-require-dev": "^8.8",

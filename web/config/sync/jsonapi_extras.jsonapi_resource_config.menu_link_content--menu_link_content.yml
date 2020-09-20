@@ -89,7 +89,7 @@ resourceFields:
     fieldName: link
     publicName: link
     enhancer:
-      id: uuid_link
+      id: alias_link
     disabled: false
   external:
     fieldName: external

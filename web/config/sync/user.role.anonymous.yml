@@ -14,4 +14,5 @@ permissions:
   - 'restful get menu_tree'
   - 'search Google CSE'
   - 'search content'
+  - 'use text format full_html'
   - 'view gatsby log entity entities'

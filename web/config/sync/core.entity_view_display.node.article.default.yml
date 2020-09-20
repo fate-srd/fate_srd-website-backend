@@ -3,19 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_display.comment.comment_node_article.default
     - field.field.node.article.body
     - field.field.node.article.comment_node_article
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
     - node.type.article
-    - responsive_image.styles.3_2_image
   enforced:
     module:
       - recipes_magazin
   module:
-    - comment
-    - responsive_image
     - text
     - user
 _core:
@@ -27,27 +23,18 @@ mode: default
 content:
   body:
     label: hidden
-    weight: 0
+    weight: 1
     type: text_default
     settings: {  }
     third_party_settings: {  }
     region: content
-  comment_node_article:
-    label: hidden
-    type: comment_default
-    weight: 20
+  field_image:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
     settings:
       view_mode: default
-      pager_id: 0
-    third_party_settings: {  }
-    region: content
-  field_image:
-    type: responsive_image
-    weight: 1
-    region: content
-    settings:
-      responsive_image_style: 3_2_image
-      image_link: ''
+      link: false
     third_party_settings: {  }
     label: hidden
   links:
@@ -58,11 +45,12 @@ content:
   title:
     label: hidden
     type: string
-    weight: -5
+    weight: 0
     region: content
     settings:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
+  comment_node_article: true
   field_tags: true
   langcode: true

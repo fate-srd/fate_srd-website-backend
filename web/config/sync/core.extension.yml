@@ -10,6 +10,7 @@ module:
   consumers: 0
   contenta_enhancements: 0
   contentajs: 0
+  ctools: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -33,6 +34,8 @@ module:
   jsonapi_boost: 0
   jsonapi_defaults: 0
   jsonapi_extras: 0
+  jsonapi_resources: 0
+  jsonapi_views: 0
   jsonrpc: 0
   jsonrpc_core: 0
   jsonrpc_discovery: 0
@@ -57,6 +60,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  pathologic: 0
   rdf: 0
   recipes_magazin: 0
   responsive_image: 0
@@ -70,6 +74,7 @@ module:
   taxonomy: 0
   telephone: 0
   text: 0
+  token: 0
   toolbar: 0
   typed_data: 0
   update: 0
@@ -78,6 +83,7 @@ module:
   views_ui: 0
   warmer: 0
   menu_link_content: 1
+  pathauto: 1
   gatsby: 100
   gatsby_instantpreview: 100
   gatsby_fastbuilds: 101
