@@ -41,6 +41,7 @@ module:
   jsonrpc_discovery: 0
   language: 0
   link: 0
+  markdown: 0
   media: 0
   media_library: 0
   menu_normalizer: 0
