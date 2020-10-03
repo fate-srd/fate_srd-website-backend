@@ -93,6 +93,9 @@
       "drupal/jsonapi": {
         "Fix menu problems": "https://www.drupal.org/files/issues/2020-05-13/2915792-47.patch",
         "Fix menu problems more": "https://www.drupal.org/files/issues/2020-05-19/3066751-32-with_issue_2915792.patch"
+      },
+      "drupal/pathologic": {
+        "https://www.drupal.org/project/pathologic/issues/2692641": "https://www.drupal.org/files/issues/2019-10-20/2692641-15.diff"
       }
     }
   },
