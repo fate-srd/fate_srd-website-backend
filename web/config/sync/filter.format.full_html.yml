@@ -2,8 +2,14 @@ uuid: b5da617b-2c00-4b1d-9ee4-32a036d60933
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - core.entity_view_mode.media.original_image_size
+    - core.entity_view_mode.media.token
   module:
+    - customfilter
     - editor
+    - markdown
     - media
     - pathologic
 name: 'Full HTML'
@@ -14,31 +20,31 @@ filters:
     id: filter_align
     provider: filter
     status: true
-    weight: 8
+    weight: -50
     settings: {  }
   filter_caption:
     id: filter_caption
     provider: filter
     status: true
-    weight: 9
+    weight: -49
     settings: {  }
   filter_htmlcorrector:
     id: filter_htmlcorrector
     provider: filter
     status: true
-    weight: 10
+    weight: -48
     settings: {  }
   editor_file_reference:
     id: editor_file_reference
     provider: editor
     status: true
-    weight: 11
+    weight: -47
     settings: {  }
   filter_html:
     id: filter_html
     provider: filter
     status: false
-    weight: -10
+    weight: -43
     settings:
       allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <h1> <pre>'
       filter_html_help: true
@@ -46,19 +52,63 @@ filters:
   media_embed:
     id: media_embed
     provider: media
-    status: false
-    weight: 100
+    status: true
+    weight: -44
     settings:
       default_view_mode: default
-      allowed_media_types: {  }
-      allowed_view_modes: {  }
+      allowed_media_types:
+        image: image
+      allowed_view_modes:
+        default: default
+        media_library: media_library
+        original_image_size: original_image_size
+        token: token
   filter_pathologic:
     id: filter_pathologic
     provider: pathologic
     status: true
-    weight: 50
+    weight: -45
     settings:
       settings_source: global
       local_settings:
         protocol_style: full
         local_paths: ''
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: false
+    weight: -38
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: false
+    weight: -40
+    settings:
+      filter_url_length: 72
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: false
+    weight: -41
+    settings: {  }
+  filter_html_escape:
+    id: filter_html_escape
+    provider: filter
+    status: false
+    weight: -42
+    settings: {  }
+  markdown:
+    id: markdown
+    provider: markdown
+    status: false
+    weight: -39
+    settings:
+      markdown_library: php-markdown
+  customfilter_gm:
+    id: customfilter_gm
+    provider: customfilter
+    status: true
+    weight: -46
+    settings:
+      id: gm

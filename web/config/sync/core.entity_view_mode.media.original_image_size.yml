@@ -1,0 +1,10 @@
+uuid: 96800807-d010-48b8-9a44-4cdef2149ad6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.original_image_size
+label: 'Original Image Size'
+targetEntityType: media
+cache: true

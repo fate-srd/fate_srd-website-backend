@@ -11,6 +11,7 @@ module:
   contenta_enhancements: 0
   contentajs: 0
   ctools: 0
+  customfilter: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -46,6 +47,10 @@ module:
   media_library: 0
   menu_normalizer: 0
   menu_ui: 0
+  metatag: 0
+  metatag_facebook: 0
+  metatag_open_graph: 0
+  metatag_twitter_cards: 0
   migrate: 0
   migrate_drupal: 0
   migrate_drupal_ui: 0
@@ -81,6 +86,8 @@ module:
   update: 0
   user: 0
   views: 0
+  views_bulk_edit: 0
+  views_bulk_operations: 0
   views_ui: 0
   warmer: 0
   menu_link_content: 1
