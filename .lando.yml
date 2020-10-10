@@ -12,3 +12,7 @@ services:
       password: drupal7
       database: drupal7
     portforward: true
+  appserver:
+    overrides:
+      environment:
+        DRUSH_OPTIONS_URI: "https://fate-srd-backend.lndo.site"
