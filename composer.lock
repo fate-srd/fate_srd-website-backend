@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "51cb5450e927ec6bbd84c6373e710018",
+    "content-hash": "782e470a45c34bcc3e4aa7aa9c8c5a50",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2775,6 +2775,58 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/ctools",
                 "issues": "https://www.drupal.org/project/issues/ctools"
+            }
+        },
+        {
+            "name": "drupal/customfilter",
+            "version": "1.0.0-beta1",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/customfilter.git",
+                "reference": "8.x-1.0-beta1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/customfilter-8.x-1.0-beta1.zip",
+                "reference": "8.x-1.0-beta1",
+                "shasum": "aa4c5dad150a7990f54238a0ff1fb80af379e2f8"
+            },
+            "require": {
+                "drupal/core": "~8.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-beta1",
+                    "datestamp": "1592167612",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "geek-merlin",
+                    "homepage": "https://www.drupal.org/user/229048"
+                },
+                {
+                    "name": "yukare",
+                    "homepage": "https://www.drupal.org/user/889254"
+                },
+                {
+                    "name": "zterry95",
+                    "homepage": "https://www.drupal.org/user/1952394"
+                }
+            ],
+            "description": "Allows to create content filter using regular expressions.",
+            "homepage": "https://www.drupal.org/project/customfilter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/customfilter"
             }
         },
         {
@@ -13077,7 +13129,8 @@
         "drupal/pathologic": 15,
         "drupal/gatsby": 5,
         "drupal/jsonapi_views": 20,
-        "drupal/typed_data": 15
+        "drupal/typed_data": 15,
+        "drupal/customfilter": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,
