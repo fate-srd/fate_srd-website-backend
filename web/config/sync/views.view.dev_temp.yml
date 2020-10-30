@@ -2,17 +2,8 @@ uuid: a19109d6-0dbe-4ae9-b6b8-4f5128452b0b
 langcode: en
 status: true
 dependencies:
-  config:
-    - taxonomy.vocabulary.fate_version
-  content:
-    - 'taxonomy_term:fate_version:20e0b601-08c1-45fa-bbcb-f5097646ff78'
-    - 'taxonomy_term:fate_version:69951119-7daa-47e6-a285-ab4a0a9dd357'
-    - 'taxonomy_term:fate_version:be97fe0f-c44d-4a28-875e-4544ea876c4f'
-    - 'taxonomy_term:fate_version:de1c04c3-4759-4987-9e65-6996f59751ec'
-    - 'taxonomy_term:fate_version:dfaad734-c7ba-4153-b541-96794d777b4e'
   module:
     - node
-    - taxonomy
     - user
     - views_bulk_operations
 id: dev_temp
@@ -166,10 +157,14 @@ display:
           clear_on_exposed: true
           action_title: Action
           selected_actions:
+            7:
+              action_id: node_save_action
             10:
               action_id: views_bulk_edit
               preconfiguration:
                 get_bundles_from_results: 1
+            13:
+              action_id: 'entity:save_action:node'
           plugin_id: views_bulk_operations_bulk_form
       filters:
         status:
@@ -185,56 +180,6 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        tid:
-          id: tid
-          table: taxonomy_index
-          field: tid
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            489: 489
-            498: 498
-            496: 496
-            497: 497
-            484: 484
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: true
-          type: select
-          limit: true
-          vid: fate_version
-          hierarchy: false
-          error_message: true
-          plugin_id: taxonomy_index_tid
       sorts:
         created:
           id: created
@@ -263,7 +208,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
@@ -280,7 +224,6 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - user
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
