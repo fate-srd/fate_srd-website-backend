@@ -15,3 +15,9 @@ preview_entity_types:
 path_mapping: ''
 secret_key: ''
 legacy_preview_url: 0
+preview:
+  article: 0
+iframe:
+  article: 0
+target:
+  article: window

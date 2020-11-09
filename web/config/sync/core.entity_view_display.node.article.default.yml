@@ -7,11 +7,13 @@ dependencies:
     - field.field.node.article.comment_node_article
     - field.field.node.article.field_image
     - field.field.node.article.field_tags
+    - field.field.node.article.metatags
     - node.type.article
   enforced:
     module:
       - recipes_magazin
   module:
+    - metatag
     - text
     - user
 _core:
@@ -42,6 +44,13 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  metatags:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
   title:
     label: hidden
     type: string
