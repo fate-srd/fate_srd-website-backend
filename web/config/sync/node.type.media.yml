@@ -8,10 +8,10 @@ third_party_settings:
   menu_ui:
     available_menus:
       - main-menu
-    parent: 'main-menu:0:'
-name: Media
+    parent: 'main-menu:'
+name: 'Actual Play'
 type: media
-description: Videos
+description: 'Videos, Podcasts, etc.'
 help: ''
 new_revision: false
 preview_mode: 1
