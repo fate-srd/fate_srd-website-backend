@@ -49,6 +49,7 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
+            - Styles
         -
           name: Tools
           items:
@@ -56,7 +57,7 @@ settings:
             - Source
   plugins:
     stylescombo:
-      styles: ''
+      styles: "span.aspect|Aspect\r\nspan.fate_font|Fate Font"
     language:
       language_list: un
 image_upload:
