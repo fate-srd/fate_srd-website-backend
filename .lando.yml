@@ -2,6 +2,7 @@ name: fate-srd-backend
 recipe: drupal8
 config:
   webroot: web
+  database: mysql:8.0
 # Create Drupal 7 database service, consider adding
 # https://www.drupal.org/docs/upgrading-drupal/upgrade-using-drush
 services:

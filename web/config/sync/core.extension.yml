@@ -27,6 +27,8 @@ module:
   file: 0
   filter: 0
   gatsby_extras: 0
+  gin_login: 0
+  gin_toolbar: 0
   hal: 0
   help: 0
   image: 0
@@ -102,4 +104,5 @@ theme:
   classy: 0
   material_admin: 0
   claro: 0
+  gin: 0
 profile: contenta_jsonapi

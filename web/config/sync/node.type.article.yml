@@ -25,7 +25,8 @@ third_party_settings:
       - menu-three-rocketeers
       - menu-venture-city
       - menu-war-of-ashes
-    parent: 'menu-atomic-robo:'
+      - menu-ihunt
+    parent: 'menu-fate-core:menu_link_content:5392e6ed-6a2d-443b-92f3-be8cec1fc600'
 _core:
   default_config_hash: BZnlJw3hJuMRsUuvXLHbDxGFo0d2xJ-ThAXqRcgXzUw
 name: Article

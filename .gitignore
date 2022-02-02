@@ -22,6 +22,7 @@ tmp/*
 
 # Ignore configuration files that may contain sensitive information.
 web/sites/*/settings.local.php
+web/sites/*/settings.live.php
 web/sites/*/settings.devdesktop.php
 web/sites/*/services*.yml
 
@@ -34,3 +35,5 @@ web/sites/simpletest
 
 reference/*
 !reference/.gitkeep
+/.editorconfig
+/.gitattributes
