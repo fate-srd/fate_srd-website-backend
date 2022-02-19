@@ -794,8 +794,9 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 
-// if (file_exists($app_root . '/' . $site_path . '/settings.live.php')) {
-//   include $app_root . '/' . $site_path . '/settings.live.php';
-// }
+if (file_exists($app_root . '/' . $site_path . '/settings.live.php')) {
+  include $app_root . '/' . $site_path . '/settings.live.php';
+}
 
 $settings['config_sync_directory'] = 'config/sync';
+$config['system.logging']['error_level']='verbose';

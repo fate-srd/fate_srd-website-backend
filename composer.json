@@ -13,44 +13,46 @@
             "email": "dawehner@users.noreply.github.com"
         }
     ],
-    "repositories": [
-        {
+    "repositories": {
+        "lenient": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/lenient"
+        },
+        "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
-    ],
+    },
     "require": {
-        "contentacms/contenta_jsonapi": "dev-8.x-3.x",
-        "cweagans/composer-patches": "^1.7",
-        "vlucas/phpdotenv": "^2.4",
-        "drush/drush": "^9.0.0",
-        "composer/installers": "^1.9",
-        "webflo/drupal-finder": "^1.0.0",
-        "webmozart/path-util": "^2.3",
-        "drupal/diff": "^1.0",
-        "drupal/googleanalytics": "1.x-dev",
-        "drupal/linkit": "^4.3",
-        "drupal/menu_pager": "^2.0",
-        "drupal/pathauto": "^1.8",
-        "drupal/pathologic": "^1.0@alpha",
-        "drupal/migrate_upgrade": "^3",
-        "drupal/gatsby": "^1.0@RC",
-        "drupal/jsonapi_views": "1.x-dev",
-        "drupal/menu_normalizer": "^2.0",
-        "drupal/markdown": "^1.3",
-        "drupal/typed_data": "^1.0@alpha",
-        "drupal/views_bulk_edit": "^2.4",
-        "drupal/core-composer-scaffold": "^8.9",
-        "drupal/core-recommended": "^8.9",
-        "drupal/material_admin": "^2.0",
+        "drupal/core-composer-scaffold": "^9",
+        "drupal/core-recommended": "9.4.x-dev",
         "drupal/gin": "^3.0",
         "drupal/gin_toolbar": "^1.0@beta",
         "drupal/gin_login": "^1.0",
+        "drupal/core-project-message": "^9",
+        "drupal/pathauto": "^1.8",
+        "vlucas/phpdotenv": "^5.4",
+        "cweagans/composer-patches": "^1.7",
+        "drush/drush": "^11.0",
+        "drupal/diff": "1.x-dev",
+        "drupal/menu_pager": "^3.0",
+        "drupal/pathologic": "^1.0@alpha",
+        "drupal/gatsby": "^1.0@RC",
+        "drupal/jsonapi_views": "^1.0",
+        "drupal/menu_normalizer": "^2.0",
+        "drupal/typed_data": "^1.0@beta",
+        "drupal/views_bulk_edit": "^2.6",
         "drupal/backup_migrate": "^5.0",
-        "drupal/customfilter": "^2.0"
+        "drupal/customfilter": "^2.0",
+        "drupal/markdown": "3.0.x-dev",
+        "composer/installers": "^2.0",
+        "webflo/drupal-finder": "^1.2",
+        "webmozart/path-util": "^2.3",
+        "drupal/simple_oauth": "5.2",
+        "league/commonmark": "^1"
     },
     "require-dev": {
-        "vijaycs85/drupal-quality-checker": "^1.0"
+        "drupal/core-dev": "^9"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -104,6 +106,13 @@
     "config": {
         "preferred-install": {
             "*": "auto"
+        },
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "drupal/core-composer-scaffold": true,
+            "drupal/core-project-message": true,
+            "cweagans/composer-patches": true,
+            "composer/installers": true
         }
     }
 }
