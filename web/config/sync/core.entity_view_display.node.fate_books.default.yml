@@ -21,18 +21,17 @@ bundle: fate_books
 mode: default
 content:
   comment_node_fate_books:
-    label: hidden
     type: comment_default
-    weight: 20
+    label: hidden
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+    weight: 20
     region: content
   field_link:
-    label: above
-    weight: 3
     type: link
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -40,41 +39,42 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 3
     region: content
   field_online:
-    label: above
-    weight: 6
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 6
     region: content
   field_previous_version_of_fate:
-    label: above
-    weight: 5
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 5
     region: content
   field_publisher:
-    label: above
-    weight: 1
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   title:
-    label: hidden
     type: string
-    weight: -5
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -5
+    region: content
 hidden:
   langcode: true

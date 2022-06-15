@@ -16,14 +16,14 @@ dependencies:
     - field.field.node.recipe.field_tags
     - node.type.recipe
     - responsive_image.styles.3_2_image
-  enforced:
-    module:
-      - recipes_magazin
   module:
     - options
     - responsive_image
     - text
     - user
+  enforced:
+    module:
+      - recipes_magazin
 _core:
   default_config_hash: hnW3kQccSsjgAdt0hKHss_9gg27HV1nL2xjvkwOpIsU
 id: node.recipe.default
@@ -32,99 +32,99 @@ bundle: recipe
 mode: default
 content:
   field_cooking_time:
-    weight: 1
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 1
     region: content
   field_difficulty:
-    weight: 2
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 2
     region: content
   field_image:
-    weight: 3
+    type: responsive_image
     label: hidden
     settings:
       responsive_image_style: 3_2_image
       image_link: ''
     third_party_settings: {  }
-    type: responsive_image
+    weight: 3
     region: content
   field_ingredients:
-    weight: 4
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 4
     region: content
   field_number_of_servings:
-    weight: 5
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 5
     region: content
   field_preparation_time:
-    weight: 6
+    type: number_integer
     label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
     third_party_settings: {  }
-    type: number_integer
+    weight: 6
     region: content
   field_recipe_category:
-    weight: 7
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 7
     region: content
   field_recipe_instruction:
-    weight: 8
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 8
     region: content
   field_summary:
-    weight: 9
+    type: text_default
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 9
     region: content
   field_tags:
-    weight: 10
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 10
     region: content
   links:
-    weight: 0
-    region: content
     settings: {  }
     third_party_settings: {  }
-  title:
-    label: hidden
-    type: string
-    weight: -5
+    weight: 0
     region: content
+  title:
+    type: string
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -5
+    region: content
 hidden:
   field_author: true
   langcode: true

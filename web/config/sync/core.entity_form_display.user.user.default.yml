@@ -5,12 +5,12 @@ dependencies:
   config:
     - field.field.user.user.user_picture
     - image.style.thumbnail
-  enforced:
-    module:
-      - recipes_magazin
   module:
     - image
     - user
+  enforced:
+    module:
+      - recipes_magazin
 _core:
   default_config_hash: lN1LGF-bdYJTEjxjmPu3HiOQ57wp0AJUhS277SX5UUY
 id: user.user.default
@@ -32,11 +32,11 @@ content:
     region: content
   user_picture:
     type: image_image
+    weight: -1
+    region: content
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
-    weight: -1
-    region: content
 hidden:
   langcode: true

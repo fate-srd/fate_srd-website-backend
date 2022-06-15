@@ -56,13 +56,13 @@ filters:
     weight: -44
     settings:
       default_view_mode: default
-      allowed_media_types:
-        image: image
       allowed_view_modes:
         default: default
         media_library: media_library
         original_image_size: original_image_size
         token: token
+      allowed_media_types:
+        image: image
   filter_pathologic:
     id: filter_pathologic
     provider: pathologic

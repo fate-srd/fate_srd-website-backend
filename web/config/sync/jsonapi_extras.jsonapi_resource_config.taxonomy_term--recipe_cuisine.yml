@@ -15,11 +15,11 @@ path: cuisines
 resourceType: cuisines
 resourceFields:
   tid:
+    disabled: false
     fieldName: tid
     publicName: internalId
     enhancer:
       id: ''
-    disabled: false
   uuid:
     disabled: true
     fieldName: uuid
@@ -39,37 +39,37 @@ resourceFields:
     enhancer:
       id: ''
   name:
+    disabled: false
     fieldName: name
     publicName: name
     enhancer:
       id: ''
-    disabled: false
   description:
+    disabled: false
     fieldName: description
     publicName: description
     enhancer:
       id: ''
-    disabled: false
   weight:
+    disabled: false
     fieldName: weight
     publicName: weight
     enhancer:
       id: ''
-    disabled: false
   parent:
+    disabled: false
     fieldName: parent
     publicName: parent
     enhancer:
       id: ''
-    disabled: false
   changed:
+    disabled: false
     fieldName: changed
     publicName: updatedAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   default_langcode:
     disabled: true
     fieldName: default_langcode
@@ -77,8 +77,8 @@ resourceFields:
     enhancer:
       id: ''
   path:
+    disabled: false
     fieldName: path
     publicName: path
     enhancer:
       id: ''
-    disabled: false

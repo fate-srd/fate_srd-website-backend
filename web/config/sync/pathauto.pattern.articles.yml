@@ -10,13 +10,13 @@ type: 'canonical_entities:node'
 pattern: '[node:field_tags:0]/[node:title]'
 selection_criteria:
   6b3135df-36d1-443e-aa42-ec09cdfb342a:
-    id: node_type
-    bundles:
-      article: article
+    id: 'entity_bundle:node'
     negate: false
+    uuid: 6b3135df-36d1-443e-aa42-ec09cdfb342a
     context_mapping:
       node: node
-    uuid: 6b3135df-36d1-443e-aa42-ec09cdfb342a
+    bundles:
+      article: article
 selection_logic: and
 weight: -5
 relationships: {  }

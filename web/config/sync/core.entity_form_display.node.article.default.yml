@@ -9,15 +9,15 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.metatags
     - node.type.article
-  enforced:
-    module:
-      - recipes_magazin
   module:
     - comment
     - media_library
     - metatag
     - path
     - text
+  enforced:
+    module:
+      - recipes_magazin
 _core:
   default_config_hash: ALvMdI4d40dummHZgchxVfcGU2BDHNV-UGK675IRFYI
 id: node.article.default
@@ -26,21 +26,21 @@ bundle: article
 mode: default
 content:
   body:
-    weight: 31
     type: text_textarea_with_summary
+    weight: 31
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    region: content
   comment_node_article:
     type: comment_default
     weight: 20
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   created:
     type: datetime_timestamp
     weight: 6
@@ -55,11 +55,11 @@ content:
       media_types: {  }
     third_party_settings: {  }
   field_tags:
-    weight: -4
     type: options_select
+    weight: -4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   langcode:
     type: language_select
     weight: 2
@@ -68,12 +68,12 @@ content:
       include_locked: true
     third_party_settings: {  }
   metatags:
+    type: metatag_firehose
     weight: 32
+    region: content
     settings:
       sidebar: true
     third_party_settings: {  }
-    type: metatag_firehose
-    region: content
   path:
     type: path
     weight: 9
@@ -82,24 +82,24 @@ content:
     third_party_settings: {  }
   promote:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 7
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   status:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 10
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   sticky:
     type: boolean_checkbox
-    settings:
-      display_label: true
     weight: 8
     region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   title:
     type: string_textfield
@@ -115,8 +115,8 @@ content:
     region: content
     settings:
       match_operator: CONTAINS
+      match_limit: 10
       size: 60
       placeholder: ''
-      match_limit: 10
     third_party_settings: {  }
 hidden: {  }

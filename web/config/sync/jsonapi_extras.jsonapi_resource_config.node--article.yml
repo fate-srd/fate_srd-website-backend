@@ -15,11 +15,11 @@ path: articles
 resourceType: articles
 resourceFields:
   nid:
+    disabled: false
     fieldName: nid
     publicName: internalId
     enhancer:
       id: ''
-    disabled: false
   uuid:
     disabled: true
     fieldName: uuid
@@ -39,11 +39,11 @@ resourceFields:
     enhancer:
       id: ''
   type:
+    disabled: false
     fieldName: type
     publicName: contentType
     enhancer:
       id: ''
-    disabled: false
   revision_timestamp:
     disabled: true
     fieldName: revision_timestamp
@@ -63,45 +63,45 @@ resourceFields:
     enhancer:
       id: ''
   status:
+    disabled: false
     fieldName: status
     publicName: isPublished
     enhancer:
       id: ''
-    disabled: false
   title:
+    disabled: false
     fieldName: title
     publicName: title
     enhancer:
       id: ''
-    disabled: false
   uid:
+    disabled: false
     fieldName: uid
     publicName: owner
     enhancer:
       id: ''
-    disabled: false
   created:
+    disabled: false
     fieldName: created
     publicName: createdAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   changed:
+    disabled: false
     fieldName: changed
     publicName: updatedAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   promote:
+    disabled: false
     fieldName: promote
     publicName: isPromoted
     enhancer:
       id: ''
-    disabled: false
   sticky:
     disabled: true
     fieldName: sticky
@@ -115,11 +115,11 @@ resourceFields:
     enhancer:
       id: ''
   revision_default:
+    disabled: false
     fieldName: revision_default
     publicName: revision_default
     enhancer:
       id: ''
-    disabled: false
   revision_translation_affected:
     disabled: true
     fieldName: revision_translation_affected
@@ -127,28 +127,28 @@ resourceFields:
     enhancer:
       id: ''
   path:
+    disabled: false
     fieldName: path
     publicName: path
     enhancer:
       id: nested
       settings:
         path: alias
-    disabled: false
   body:
+    disabled: false
     fieldName: body
     publicName: body
     enhancer:
       id: ''
-    disabled: false
   field_image:
+    disabled: false
     fieldName: field_image
     publicName: image
     enhancer:
       id: ''
-    disabled: false
   field_tags:
+    disabled: false
     fieldName: field_tags
     publicName: tags
     enhancer:
       id: ''
-    disabled: false

@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - taxonomy.vocabulary.tags
+  module:
+    - taxonomy
   enforced:
     module:
       - recipes_magazin
-  module:
-    - taxonomy
 _core:
   default_config_hash: _YqpbUf1-30r--MjVCbSLIfy-pS1FKHPzVI4KyPyhaA
 id: taxonomy_term.tags

@@ -22,10 +22,10 @@ translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:
+  handler: 'default:taxonomy_term'
   handler_settings:
-    sort:
-      field: _none
     target_bundles:
       fate_version: fate_version
-  handler: 'default:taxonomy_term'
+    sort:
+      field: _none
 field_type: entity_reference

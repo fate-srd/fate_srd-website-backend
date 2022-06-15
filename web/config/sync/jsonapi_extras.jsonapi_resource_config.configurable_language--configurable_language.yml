@@ -2,11 +2,11 @@ uuid: 236cdaab-0e5f-4647-b962-73661b5706c2
 langcode: en
 status: true
 dependencies:
+  module:
+    - language
   enforced:
     module:
       - recipes_magazin
-  module:
-    - language
 _core:
   default_config_hash: oLj57nCfRjKp0PYnyZDLeA4GAggrYsJCTclyozk9Lwc
 id: configurable_language--configurable_language
@@ -15,50 +15,50 @@ path: configurable_language/configurable_language
 resourceType: configurable_language--configurable_language
 resourceFields:
   id:
+    disabled: false
     fieldName: id
     publicName: id
     enhancer:
       id: ''
-    disabled: false
   label:
+    disabled: false
     fieldName: label
     publicName: label
     enhancer:
       id: ''
-    disabled: false
   weight:
+    disabled: false
     fieldName: weight
     publicName: weight
     enhancer:
       id: ''
-    disabled: false
   revision:
+    disabled: false
     fieldName: revision
     publicName: revision
     enhancer:
       id: ''
-    disabled: false
   bundle:
+    disabled: false
     fieldName: bundle
     publicName: bundle
     enhancer:
       id: ''
-    disabled: false
   langcode:
+    disabled: false
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-    disabled: false
   default_langcode:
+    disabled: false
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
-    disabled: false
   uuid:
+    disabled: false
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
-    disabled: false

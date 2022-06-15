@@ -2,11 +2,11 @@ uuid: c49335fc-be72-4848-9bc6-3386be4ad3a7
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - recipes_magazin
-  module:
-    - node
 _core:
   default_config_hash: V8YjZCDk3t6qquX66CMhY8q8CSNep4yTYH7oaTbu3js
 id: node.field_ingredients
@@ -15,8 +15,8 @@ entity_type: node
 type: string
 settings:
   max_length: 255
-  is_ascii: false
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: -1

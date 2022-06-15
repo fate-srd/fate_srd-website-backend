@@ -20,25 +20,24 @@ bundle: author
 mode: default
 content:
   body:
-    label: hidden
-    weight: 0
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   comment_node_author:
-    label: hidden
     type: comment_default
-    weight: 20
+    label: hidden
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+    weight: 20
     region: content
   field_link:
-    label: hidden
-    weight: 1
     type: link
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -46,20 +45,21 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   title:
-    label: hidden
     type: string
-    weight: -5
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -5
+    region: content
 hidden:
   field_tags: true
   langcode: true

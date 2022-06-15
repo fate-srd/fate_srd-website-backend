@@ -1,8 +1,9 @@
 access_token_expiration: 300
+authorization_code_expiration: null
 refresh_token_expiration: 870000
+token_cron_batch_size: 0
 public_key: ../keys/public.key
 private_key: ../keys/private.key
-authorization_code_expiration: null
-token_cron_batch_size: 0
 remember_clients: false
 use_implicit: false
+disable_openid_connect: false

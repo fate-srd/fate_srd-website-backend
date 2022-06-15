@@ -22,41 +22,40 @@ bundle: download
 mode: default
 content:
   comment_node_download:
-    label: hidden
     type: comment_default
-    weight: 20
+    label: hidden
     settings:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+    weight: 20
     region: content
   field_dl_tags:
-    label: above
-    weight: 2
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 2
     region: content
   field_file:
-    label: above
-    weight: 3
     type: file_default
+    label: above
     settings:
       use_description_as_link_text: true
     third_party_settings: {  }
+    weight: 3
     region: content
   field_hosted_elsewhere:
-    label: above
-    weight: 4
     type: list_default
+    label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 4
     region: content
   field_link:
-    label: above
-    weight: 1
     type: link
+    label: above
     settings:
       trim_length: 80
       url_only: false
@@ -64,19 +63,20 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
+    weight: 1
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   title:
-    label: hidden
     type: string
-    weight: -5
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -5
+    region: content
 hidden:
   langcode: true

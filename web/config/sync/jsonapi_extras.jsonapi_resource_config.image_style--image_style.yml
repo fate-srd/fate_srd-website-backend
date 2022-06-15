@@ -2,11 +2,11 @@ uuid: b3bd79ac-809d-4841-bfe4-3d3139929626
 langcode: en
 status: true
 dependencies:
+  module:
+    - image
   enforced:
     module:
       - recipes_magazin
-  module:
-    - image
 _core:
   default_config_hash: 5FTr7a2XGISwZbGCKO8pWKFQPPqAysaMcZ0Z44jHKG8
 id: image_style--image_style
@@ -15,17 +15,17 @@ path: imageStyles
 resourceType: imageStyles
 resourceFields:
   id:
+    disabled: false
     fieldName: id
     publicName: internalId
     enhancer:
       id: ''
-    disabled: false
   label:
+    disabled: false
     fieldName: label
     publicName: label
     enhancer:
       id: ''
-    disabled: false
   revision:
     disabled: true
     fieldName: revision
@@ -33,11 +33,11 @@ resourceFields:
     enhancer:
       id: ''
   bundle:
+    disabled: false
     fieldName: bundle
     publicName: bundle
     enhancer:
       id: ''
-    disabled: false
   langcode:
     disabled: true
     fieldName: langcode

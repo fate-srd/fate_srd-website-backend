@@ -15,11 +15,11 @@ path: comments
 resourceType: comments
 resourceFields:
   cid:
+    disabled: false
     fieldName: cid
     publicName: internalId
     enhancer:
       id: ''
-    disabled: false
   uuid:
     disabled: true
     fieldName: uuid
@@ -33,99 +33,99 @@ resourceFields:
     enhancer:
       id: ''
   comment_type:
+    disabled: false
     fieldName: comment_type
     publicName: commentType
     enhancer:
       id: ''
-    disabled: false
   status:
+    disabled: false
     fieldName: status
     publicName: isPublished
     enhancer:
       id: ''
-    disabled: false
   pid:
+    disabled: false
     fieldName: pid
     publicName: pid
     enhancer:
       id: ''
-    disabled: false
   entity_id:
+    disabled: false
     fieldName: entity_id
     publicName: referencedInternalId
     enhancer:
       id: ''
-    disabled: false
   subject:
+    disabled: false
     fieldName: subject
     publicName: subject
     enhancer:
       id: ''
-    disabled: false
   uid:
+    disabled: false
     fieldName: uid
     publicName: owner
     enhancer:
       id: ''
-    disabled: false
   name:
+    disabled: false
     fieldName: name
     publicName: name
     enhancer:
       id: ''
-    disabled: false
   mail:
+    disabled: false
     fieldName: mail
     publicName: mail
     enhancer:
       id: ''
-    disabled: false
   homepage:
+    disabled: false
     fieldName: homepage
     publicName: homepage
     enhancer:
       id: ''
-    disabled: false
   hostname:
+    disabled: false
     fieldName: hostname
     publicName: hostname
     enhancer:
       id: ''
-    disabled: false
   created:
+    disabled: false
     fieldName: created
     publicName: createdAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   changed:
+    disabled: false
     fieldName: changed
     publicName: updatedAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   thread:
+    disabled: false
     fieldName: thread
     publicName: thread
     enhancer:
       id: ''
-    disabled: false
   entity_type:
+    disabled: false
     fieldName: entity_type
     publicName: entityTypeId
     enhancer:
       id: ''
-    disabled: false
   field_name:
+    disabled: false
     fieldName: field_name
     publicName: fieldName
     enhancer:
       id: ''
-    disabled: false
   default_langcode:
     disabled: true
     fieldName: default_langcode
@@ -133,10 +133,10 @@ resourceFields:
     enhancer:
       id: ''
   comment_body:
+    disabled: false
     fieldName: comment_body
     publicName: body
     enhancer:
       id: nested
       settings:
         path: value
-    disabled: false

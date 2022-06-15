@@ -2,12 +2,12 @@ uuid: 3fd2ba95-3a76-441d-a8df-670dc3ae0542
 langcode: en
 status: true
 dependencies:
-  enforced:
-    module:
-      - recipes_magazin
   module:
     - node
     - options
+  enforced:
+    module:
+      - recipes_magazin
 _core:
   default_config_hash: jc2vMf8jz3ha2nrtoHGMJjli-jRhTyeILdEK7bsnJU4
 id: node.field_topic

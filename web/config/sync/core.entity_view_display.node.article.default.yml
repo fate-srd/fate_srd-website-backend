@@ -9,13 +9,13 @@ dependencies:
     - field.field.node.article.field_tags
     - field.field.node.article.metatags
     - node.type.article
-  enforced:
-    module:
-      - recipes_magazin
   module:
     - metatag
     - text
     - user
+  enforced:
+    module:
+      - recipes_magazin
 _core:
   default_config_hash: a6FL8eNis9oIKMTSGug58B_vgym7syEOS4HBYbCPhyM
 id: node.article.default
@@ -24,41 +24,41 @@ bundle: article
 mode: default
 content:
   body:
-    label: hidden
-    weight: 1
     type: text_default
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 1
     region: content
   field_image:
     type: entity_reference_entity_view
-    weight: 2
-    region: content
+    label: hidden
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
-    label: hidden
-  links:
-    weight: 3
+    weight: 2
     region: content
+  links:
     settings: {  }
     third_party_settings: {  }
+    weight: 3
+    region: content
   metatags:
-    weight: 4
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 4
     region: content
   title:
-    label: hidden
     type: string
-    weight: 0
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   comment_node_article: true
   field_tags: true

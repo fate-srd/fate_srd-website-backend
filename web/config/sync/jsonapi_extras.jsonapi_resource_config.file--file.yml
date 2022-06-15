@@ -2,11 +2,11 @@ uuid: fe242c58-d794-418f-9cbf-dee7c7aef913
 langcode: en
 status: true
 dependencies:
+  module:
+    - file
   enforced:
     module:
       - recipes_magazin
-  module:
-    - file
 _core:
   default_config_hash: mHgG1Hh3mA_B-HChvPPr9IRUvDs0uH74Ju87GVLNzJI
 id: file--file
@@ -15,11 +15,11 @@ path: files
 resourceType: files
 resourceFields:
   fid:
+    disabled: false
     fieldName: fid
     publicName: internalId
     enhancer:
       id: ''
-    disabled: false
   uuid:
     disabled: true
     fieldName: uuid
@@ -33,60 +33,60 @@ resourceFields:
     enhancer:
       id: ''
   uid:
+    disabled: false
     fieldName: uid
     publicName: owner
     enhancer:
       id: ''
-    disabled: false
   filename:
+    disabled: false
     fieldName: filename
     publicName: filename
     enhancer:
       id: ''
-    disabled: false
   uri:
+    disabled: false
     fieldName: uri
     publicName: uri
     enhancer:
       id: ''
-    disabled: false
   filemime:
+    disabled: false
     fieldName: filemime
     publicName: mimetype
     enhancer:
       id: ''
-    disabled: false
   filesize:
+    disabled: false
     fieldName: filesize
     publicName: size
     enhancer:
       id: ''
-    disabled: false
   status:
+    disabled: false
     fieldName: status
     publicName: isPublished
     enhancer:
       id: ''
-    disabled: false
   created:
+    disabled: false
     fieldName: created
     publicName: createdAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   changed:
+    disabled: false
     fieldName: changed
     publicName: updatedAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   url:
+    disabled: false
     fieldName: url
     publicName: url
     enhancer:
       id: ''
-    disabled: false

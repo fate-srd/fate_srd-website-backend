@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - filter.format.basic_html
+  module:
+    - ckeditor
   enforced:
     module:
       - recipes_magazin
-  module:
-    - ckeditor
 _core:
   default_config_hash: uW6WFbJd5BE2YM_hSjsONTn0MOSx8X3LniKRa9-IH7w
 format: basic_html

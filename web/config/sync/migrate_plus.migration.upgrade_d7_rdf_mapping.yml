@@ -50,8 +50,8 @@ process:
 destination:
   plugin: 'entity:rdf_mapping'
 migration_dependencies:
+  required: {  }
   optional:
     - upgrade_d7_comment_type
     - upgrade_d7_node_type
     - upgrade_d7_taxonomy_vocabulary
-  required: {  }

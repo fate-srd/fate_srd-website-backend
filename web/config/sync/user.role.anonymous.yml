@@ -1,16 +1,18 @@
 uuid: 3b12a7bc-f8f4-43e6-8f67-71020bdcd44d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - filter
+    - gatsby_fastbuilds
+    - system
 id: anonymous
 label: 'anonymous user'
 weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'diff view changes'
-  - 'restful get menu_tree'
-  - 'search Google CSE'
-  - 'search content'
   - 'use text format full_html'
   - 'view gatsby log entity entities'

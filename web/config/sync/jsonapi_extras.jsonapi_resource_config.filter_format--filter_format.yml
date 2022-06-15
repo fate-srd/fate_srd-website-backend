@@ -2,11 +2,11 @@ uuid: 60c09ed9-67dc-40b2-a474-bf81ca5ac4d0
 langcode: en
 status: true
 dependencies:
+  module:
+    - filter
   enforced:
     module:
       - recipes_magazin
-  module:
-    - filter
 _core:
   default_config_hash: 42nBlXwBRUhC5L5sv658K5z2kjZFmqCEneKrJC8khFI
 id: filter_format--filter_format
@@ -15,56 +15,56 @@ path: filter_format/filter_format
 resourceType: filter_format--filter_format
 resourceFields:
   id:
+    disabled: false
     fieldName: id
     publicName: id
     enhancer:
       id: ''
-    disabled: false
   label:
+    disabled: false
     fieldName: label
     publicName: label
     enhancer:
       id: ''
-    disabled: false
   weight:
+    disabled: false
     fieldName: weight
     publicName: weight
     enhancer:
       id: ''
-    disabled: false
   status:
+    disabled: false
     fieldName: status
     publicName: status
     enhancer:
       id: ''
-    disabled: false
   revision:
+    disabled: false
     fieldName: revision
     publicName: revision
     enhancer:
       id: ''
-    disabled: false
   bundle:
+    disabled: false
     fieldName: bundle
     publicName: bundle
     enhancer:
       id: ''
-    disabled: false
   langcode:
+    disabled: false
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-    disabled: false
   default_langcode:
+    disabled: false
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
-    disabled: false
   uuid:
+    disabled: false
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
-    disabled: false

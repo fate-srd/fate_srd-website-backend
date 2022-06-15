@@ -5,11 +5,11 @@ dependencies:
   config:
     - field.storage.node.body
     - node.type.article
+  module:
+    - text
   enforced:
     module:
       - recipes_magazin
-  module:
-    - text
 _core:
   default_config_hash: lyDNOIXanFmC0MI3YBxmuQxSM6nFuR_z-yvagOI5wA8
 id: node.article.body

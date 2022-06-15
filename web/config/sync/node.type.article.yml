@@ -2,11 +2,12 @@ uuid: 111a9318-6811-4014-8829-75043a78c365
 langcode: en
 status: true
 dependencies:
+  module:
+    - gatsby
+    - menu_ui
   enforced:
     module:
       - recipes_magazin
-  module:
-    - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:
@@ -27,6 +28,10 @@ third_party_settings:
       - menu-war-of-ashes
       - menu-ihunt
     parent: 'menu-fate-core:menu_link_content:5392e6ed-6a2d-443b-92f3-be8cec1fc600'
+  gatsby:
+    preview: false
+    target: window
+    iframe: false
 _core:
   default_config_hash: BZnlJw3hJuMRsUuvXLHbDxGFo0d2xJ-ThAXqRcgXzUw
 name: Article

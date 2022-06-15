@@ -2,11 +2,11 @@ uuid: 007bf970-1c76-4228-b06c-b06f9baa80bd
 langcode: en
 status: true
 dependencies:
+  module:
+    - simple_oauth
   enforced:
     module:
       - recipes_magazin
-  module:
-    - simple_oauth
 _core:
   default_config_hash: H4j2KH8dm3ky4JJpYtwLHHx2BeFCdPSCR6PymmR7HoU
 id: oauth2_token_type--oauth2_token_type
@@ -15,44 +15,44 @@ path: oauth2_token_type/oauth2_token_type
 resourceType: oauth2_token_type--oauth2_token_type
 resourceFields:
   id:
+    disabled: false
     fieldName: id
     publicName: id
     enhancer:
       id: ''
-    disabled: false
   label:
+    disabled: false
     fieldName: label
     publicName: label
     enhancer:
       id: ''
-    disabled: false
   uuid:
+    disabled: false
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
-    disabled: false
   revision:
+    disabled: false
     fieldName: revision
     publicName: revision
     enhancer:
       id: ''
-    disabled: false
   bundle:
+    disabled: false
     fieldName: bundle
     publicName: bundle
     enhancer:
       id: ''
-    disabled: false
   langcode:
+    disabled: false
     fieldName: langcode
     publicName: langcode
     enhancer:
       id: ''
-    disabled: false
   default_langcode:
+    disabled: false
     fieldName: default_langcode
     publicName: default_langcode
     enhancer:
       id: ''
-    disabled: false

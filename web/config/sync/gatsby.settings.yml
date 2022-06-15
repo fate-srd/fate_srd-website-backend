@@ -1,6 +1,8 @@
 server_url: 'http://localhost:8000'
+preview_callback_url: 'http://localhost:8000/__refresh'
+path_mapping: ''
 incrementalbuild_url: ''
-build_published: 1
+build_published: true
 preview_entity_types:
   comment: comment
   consumer: consumer
@@ -12,15 +14,5 @@ preview_entity_types:
   taxonomy_term: taxonomy_term
   user: user
   menu_link_content: menu_link_content
-path_mapping: ''
 secret_key: ''
 legacy_preview_url: 0
-preview:
-  article: 0
-  media: 0
-iframe:
-  article: 0
-  media: 0
-target:
-  article: window
-  media: window

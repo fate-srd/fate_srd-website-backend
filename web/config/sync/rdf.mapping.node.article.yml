@@ -4,11 +4,11 @@ status: true
 dependencies:
   config:
     - node.type.article
+  module:
+    - node
   enforced:
     module:
       - recipes_magazin
-  module:
-    - node
 _core:
   default_config_hash: 7TtQd5t4BJ8OP6oie_rzQ-xJ1VIPf9bEEwrh5Xjfm3Q
 id: node.article

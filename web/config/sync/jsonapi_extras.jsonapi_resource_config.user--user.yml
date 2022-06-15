@@ -2,11 +2,11 @@ uuid: 0e84372c-73e9-4ef8-a851-2ab40ac34d96
 langcode: en
 status: true
 dependencies:
+  module:
+    - user
   enforced:
     module:
       - recipes_magazin
-  module:
-    - user
 _core:
   default_config_hash: 6PlhKpIBO7vz992v58gvwnSgMUVVBjMnpDiABdZOUCg
 id: user--user
@@ -15,11 +15,11 @@ path: users
 resourceType: users
 resourceFields:
   uid:
+    disabled: false
     fieldName: uid
     publicName: internalId
     enhancer:
       id: ''
-    disabled: false
   uuid:
     disabled: true
     fieldName: uuid
@@ -45,11 +45,11 @@ resourceFields:
     enhancer:
       id: ''
   name:
+    disabled: false
     fieldName: name
     publicName: name
     enhancer:
       id: ''
-    disabled: false
   pass:
     disabled: true
     fieldName: pass
@@ -57,53 +57,53 @@ resourceFields:
     enhancer:
       id: ''
   mail:
+    disabled: false
     fieldName: mail
     publicName: mail
     enhancer:
       id: ''
-    disabled: false
   timezone:
+    disabled: false
     fieldName: timezone
     publicName: timezone
     enhancer:
       id: ''
-    disabled: false
   status:
+    disabled: false
     fieldName: status
     publicName: isActive
     enhancer:
       id: ''
-    disabled: false
   created:
+    disabled: false
     fieldName: created
     publicName: createdAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   changed:
+    disabled: false
     fieldName: changed
     publicName: updatedAt
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   access:
+    disabled: false
     fieldName: access
     publicName: access
     enhancer:
       id: ''
-    disabled: false
   login:
+    disabled: false
     fieldName: login
     publicName: lastLogin
     enhancer:
       id: date_time
       settings:
         dateTimeFormat: 'Y-m-d\TH:i:sO'
-    disabled: false
   init:
     disabled: true
     fieldName: init
@@ -111,11 +111,11 @@ resourceFields:
     enhancer:
       id: ''
   roles:
+    disabled: false
     fieldName: roles
     publicName: roles
     enhancer:
       id: ''
-    disabled: false
   default_langcode:
     disabled: true
     fieldName: default_langcode

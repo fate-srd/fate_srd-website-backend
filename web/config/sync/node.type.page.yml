@@ -2,11 +2,11 @@ uuid: f44f7b75-17f9-4422-be61-70dc556c098b
 langcode: en
 status: true
 dependencies:
+  module:
+    - menu_ui
   enforced:
     module:
       - recipes_magazin
-  module:
-    - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:

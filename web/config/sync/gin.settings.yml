@@ -1,23 +1,27 @@
-preset_accent_color: blue
-preset_focus_color: gin
-enable_darkmode: true
-classic_toolbar: horizontal
-icon_default: true
-icon_path: ''
-high_contrast_mode: false
-show_user_theme_settings: false
-third_party_settings:
-  shortcut:
-    module_link: true
 _core:
   default_config_hash: QdiqmcH9tjpstXqCQKv4G4rHYE4HjWLFkVzyqooqEWM
+favicon:
+  use_default: true
 features:
-  node_user_picture: false
   comment_user_picture: true
   comment_user_verification: true
   favicon: true
-favicon:
+  node_user_picture: false
+logo:
   use_default: true
-accent_color: ''
+third_party_settings:
+  shortcut:
+    module_link: true
+preset_accent_color: custom
+preset_focus_color: gin
+enable_darkmode: '0'
+classic_toolbar: horizontal
+secondary_toolbar_frontend: true
+high_contrast_mode: false
+accent_color: '#286DC0'
 focus_color: ''
+show_description_toggle: false
+show_user_theme_settings: false
+icon_default: true
+icon_path: ''
 icon_upload: ''

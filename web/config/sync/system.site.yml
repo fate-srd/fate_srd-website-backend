@@ -1,3 +1,5 @@
+langcode: en
+uuid: b7cc8588-03e5-49cb-87cf-a28b771415b8
 name: 'Fate SRD'
 mail: randy@fate-srd.com
 slogan: ''
@@ -7,6 +9,4 @@ page:
   front: /node
 admin_compact_mode: false
 weight_select_max: 100
-langcode: en
 default_langcode: en
-uuid: b7cc8588-03e5-49cb-87cf-a28b771415b8

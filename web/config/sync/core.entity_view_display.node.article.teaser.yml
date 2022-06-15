@@ -19,34 +19,34 @@ bundle: article
 mode: teaser
 content:
   body:
-    label: hidden
-    weight: 0
     type: text_summary_or_trimmed
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 0
     region: content
   field_tags:
-    label: above
-    weight: 10
     type: entity_reference_label
+    label: above
     settings:
       link: true
     third_party_settings: {  }
+    weight: 10
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
   title:
-    label: hidden
     type: string
-    weight: -5
-    region: content
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
+    weight: -5
+    region: content
 hidden:
   comment_node_article: true
   field_image: true

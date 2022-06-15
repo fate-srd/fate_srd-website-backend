@@ -5,11 +5,11 @@ dependencies:
   config:
     - comment.type.comment
     - field.storage.comment.comment_body
+  module:
+    - text
   enforced:
     module:
       - recipes_magazin
-  module:
-    - text
 _core:
   default_config_hash: 9aAh_9w52R-VtvQQhVneMNXdtZc2Mlab6VChpPHGBEM
 id: comment.comment.comment_body

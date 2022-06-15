@@ -2,11 +2,11 @@ uuid: 46af36d3-2448-4d01-a483-05b266414fa1
 langcode: en
 status: true
 dependencies:
+  module:
+    - node
   enforced:
     module:
       - recipes_magazin
-  module:
-    - node
 _core:
   default_config_hash: QmAcvkeZV_koHeIUJ8wF9CXZjoRvT6wLAcgjtbgbZVY
 id: node.field_cooking_time
