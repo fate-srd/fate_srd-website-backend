@@ -1,5 +1,5 @@
 name: fate-srd-backend
-recipe: drupal8
+recipe: drupal9
 config:
   webroot: web
   database: mysql:8.0

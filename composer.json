@@ -24,17 +24,16 @@
         }
     },
     "require": {
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-recommended": "9.4.x-dev",
+        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-recommended": "^9.3",
         "drupal/gin": "^3.0",
         "drupal/gin_toolbar": "^1.0@beta",
         "drupal/gin_login": "^1.0",
-        "drupal/core-project-message": "^9",
+        "drupal/core-project-message": "^9.3",
         "drupal/pathauto": "^1.8",
         "vlucas/phpdotenv": "^5.4",
         "cweagans/composer-patches": "^1.7",
         "drush/drush": "^11.0",
-        "drupal/diff": "1.x-dev",
         "drupal/menu_pager": "^3.0",
         "drupal/pathologic": "^1.0@alpha",
         "drupal/gatsby": "^1.0@RC",
@@ -49,10 +48,18 @@
         "webflo/drupal-finder": "^1.2",
         "webmozart/path-util": "^2.3",
         "drupal/simple_oauth": "5.2",
-        "league/commonmark": "^1"
-    },
-    "require-dev": {
-        "drupal/core-dev": "^9"
+        "league/commonmark": "^1",
+        "drupal/contentajs": "^2.0",
+        "drupal/consumer_image_styles": "^4.0",
+        "drupal/decoupled_router": "^2.0",
+        "drupal/jsonapi_boost": "^2.0",
+        "drupal/metatag": "^1.19",
+        "drupal/openapi_jsonapi": "^3.0",
+        "drupal/subrequests": "^3.0",
+        "drupal/views_bulk_operations": "^4.1",
+        "drupal/warmer": "^2.0",
+        "drupal/environment_indicator": "^4.0",
+        "drupal/admin_toolbar": "^3.1"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -97,9 +104,6 @@
             "drupal/jsonapi": {
                 "Fix menu problems": "https://www.drupal.org/files/issues/2020-05-13/2915792-47.patch",
                 "Fix menu problems more": "https://www.drupal.org/files/issues/2020-05-19/3066751-32-with_issue_2915792.patch"
-            },
-            "drupal/pathologic": {
-                "https://www.drupal.org/project/pathologic/issues/2692641": "https://www.drupal.org/files/issues/2019-10-20/2692641-15.diff"
             }
         }
     },
