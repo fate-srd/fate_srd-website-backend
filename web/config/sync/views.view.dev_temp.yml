@@ -121,6 +121,7 @@ display:
           batch: true
           batch_size: 10
           form_step: true
+          ajax_loader: false
           buttons: false
           action_title: Action
           clear_on_exposed: true
@@ -130,7 +131,7 @@ display:
             10:
               action_id: views_bulk_edit
               preconfiguration:
-                get_bundles_from_results: 1
+                get_bundles_from_results: true
             13:
               action_id: 'entity:save_action:node'
       pager:

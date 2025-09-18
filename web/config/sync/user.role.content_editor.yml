@@ -7,22 +7,42 @@ dependencies:
     - node.type.article
     - node.type.page
   module:
+    - file
     - filter
+    - media
     - node
+    - search
     - system
+    - taxonomy
+    - toolbar
 id: content_editor
 label: 'Content Editor'
 weight: 3
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer media'
+  - 'administer media types'
   - 'administer menu'
   - 'create article content'
+  - 'create media'
   - 'create page content'
   - 'edit any article content'
   - 'edit any page content'
   - 'edit own article content'
   - 'edit own page content'
+  - 'link to any page'
+  - 'search content'
+  - 'update any media'
+  - 'use advanced search'
   - 'use text format full_html'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view media'
   - 'view own unpublished content'
   - 'view the administration theme'

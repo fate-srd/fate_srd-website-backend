@@ -4,9 +4,14 @@ status: true
 dependencies:
   config:
     - node.type.page
+  module:
+    - jsonapi_defaults
   enforced:
     module:
       - recipes_magazin
+third_party_settings:
+  jsonapi_defaults:
+    page_limit: 50
 _core:
   default_config_hash: F5OFkwrFAO97YooID8E6DL2izj58A_s9f4VidlGPzdU
 id: node--page
@@ -21,19 +26,19 @@ resourceFields:
     enhancer:
       id: ''
   uuid:
-    disabled: true
+    disabled: false
     fieldName: uuid
     publicName: uuid
     enhancer:
       id: ''
   vid:
-    disabled: true
+    disabled: false
     fieldName: vid
     publicName: vid
     enhancer:
       id: ''
   langcode:
-    disabled: true
+    disabled: false
     fieldName: langcode
     publicName: langcode
     enhancer:
@@ -44,22 +49,40 @@ resourceFields:
     publicName: contentType
     enhancer:
       id: ''
+  revision_timestamp:
+    disabled: false
+    fieldName: revision_timestamp
+    publicName: revision_timestamp
+    enhancer:
+      id: ''
+  revision_uid:
+    disabled: false
+    fieldName: revision_uid
+    publicName: revision_uid
+    enhancer:
+      id: ''
+  revision_log:
+    disabled: false
+    fieldName: revision_log
+    publicName: revision_log
+    enhancer:
+      id: ''
   status:
     disabled: false
     fieldName: status
     publicName: isPublished
     enhancer:
       id: ''
-  title:
-    disabled: false
-    fieldName: title
-    publicName: title
-    enhancer:
-      id: ''
   uid:
     disabled: false
     fieldName: uid
     publicName: owner
+    enhancer:
+      id: ''
+  title:
+    disabled: false
+    fieldName: title
+    publicName: title
     enhancer:
       id: ''
   created:
@@ -85,39 +108,33 @@ resourceFields:
     enhancer:
       id: ''
   sticky:
-    disabled: true
+    disabled: false
     fieldName: sticky
     publicName: sticky
     enhancer:
       id: ''
-  revision_timestamp:
-    disabled: true
-    fieldName: revision_timestamp
-    publicName: revision_timestamp
+  default_langcode:
+    disabled: false
+    fieldName: default_langcode
+    publicName: default_langcode
     enhancer:
       id: ''
-  revision_uid:
-    disabled: true
-    fieldName: revision_uid
-    publicName: revision_uid
-    enhancer:
-      id: ''
-  revision_log:
-    disabled: true
-    fieldName: revision_log
-    publicName: revision_log
+  revision_default:
+    disabled: false
+    fieldName: revision_default
+    publicName: revision_default
     enhancer:
       id: ''
   revision_translation_affected:
-    disabled: true
+    disabled: false
     fieldName: revision_translation_affected
     publicName: revision_translation_affected
     enhancer:
       id: ''
-  default_langcode:
-    disabled: true
-    fieldName: default_langcode
-    publicName: default_langcode
+  metatag:
+    disabled: false
+    fieldName: metatag
+    publicName: metatag
     enhancer:
       id: ''
   path:
@@ -128,6 +145,12 @@ resourceFields:
       id: nested
       settings:
         path: alias
+  menu_link:
+    disabled: false
+    fieldName: menu_link
+    publicName: menu_link
+    enhancer:
+      id: ''
   body:
     disabled: false
     fieldName: body
@@ -136,3 +159,9 @@ resourceFields:
       id: nested
       settings:
         path: value
+  comment_node_page:
+    disabled: false
+    fieldName: comment_node_page
+    publicName: comment_node_page
+    enhancer:
+      id: ''

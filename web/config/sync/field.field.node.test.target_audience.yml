@@ -1,0 +1,21 @@
+uuid: e467812a-50f8-492c-a53c-a7a8cb9b8a0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.target_audience
+    - node.type.test
+  module:
+    - options
+id: node.test.target_audience
+field_name: target_audience
+entity_type: node
+bundle: test
+label: 'Target audience'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_float

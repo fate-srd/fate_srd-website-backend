@@ -1,70 +1,57 @@
-uuid: 3e3de886-197c-401c-856b-62eb98b2ef48
+uuid: d38aba09-98da-4485-9cbf-d3d030cadf8b
 langcode: en
 status: true
 dependencies:
   config:
     - filter.format.full_html
   module:
-    - ckeditor
-  enforced:
-    module:
-      - recipes_magazin
-_core:
-  default_config_hash: RwCfd1mUaHDu-htlHxMMBQ8szSmFE8elM3_yFDRXeV0
+    - ckeditor5
 format: full_html
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-            - Strike
-            - Superscript
-            - Subscript
-            - '-'
-            - RemoveFormat
-        -
-          name: Linking
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Lists
-          items:
-            - BulletedList
-            - NumberedList
-        -
-          name: Media
-          items:
-            - Blockquote
-            - DrupalMediaLibrary
-            - DrupalImage
-            - Table
-            - HorizontalRule
-        -
-          name: 'Block Formatting'
-          items:
-            - Format
-            - Styles
-        -
-          name: Tools
-          items:
-            - ShowBlocks
-            - Source
+    items:
+      - heading
+      - bold
+      - italic
+      - style
+      - sourceEditing
+      - link
+      - bulletedList
+      - numberedList
+      - removeFormat
+      - drupalInsertImage
   plugins:
-    stylescombo:
-      styles: "span.aspect|Aspect\r\nspan.fate_font|Fate Font"
-    language:
-      language_list: un
+    ckeditor5_heading:
+      enabled_headings:
+        - heading1
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_style:
+      styles:
+        -
+          label: Aspect
+          element: '<span class="aspect">'
+    ckeditor5_sourceEditing:
+      allowed_tags: {  }
+    ckeditor5_list:
+      reversed: true
+      startIndex: true
+    ckeditor5_imageResize:
+      allow_resize: true
+    media_media:
+      allow_view_mode_override: false
+    linkit_extension:
+      linkit_enabled: true
+      linkit_profile: default
 image_upload:
-  status: true
+  status: false
   scheme: public
   directory: inline-images
   max_size: ''
   max_dimensions:
-    width: null
-    height: null
+    width: 0
+    height: 0

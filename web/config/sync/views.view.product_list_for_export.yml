@@ -1,27 +1,25 @@
-uuid: 1ad66362-bc09-4dde-8b4f-d46ee2535469
+uuid: f9943dcb-15c6-4377-b9c9-b8e754c0dcae
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_image
     - field.storage.node.field_link
-    - field.storage.node.field_summary
-    - field.storage.node.field_topic
-    - image.style.card
-    - node.type.tutorial
-    - system.menu.contenta
+    - field.storage.node.field_online
+    - field.storage.node.field_previous_version_of_fate
+    - field.storage.node.field_publisher
+    - field.storage.node.field_tags
+    - node.type.fate_books
+    - user.role.authenticated
   module:
-    - image
+    - csv_serialization
     - link
-    - media
     - node
-    - options
-    - text
+    - rest
+    - serialization
     - user
-_core:
-  default_config_hash: D8Pw4x04ARtOrbodqFybYDaPgVDeYvdfpoDczVJkiMU
-id: tutorials
-label: Tutorials
+    - views_data_export
+id: product_list_for_export
+label: 'Product List for Export'
 module: views
 description: ''
 tag: ''
@@ -30,24 +28,21 @@ base_field: nid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Default
     display_plugin: default
     position: 0
     display_options:
-      title: Tutorials
       fields:
-        title:
-          id: title
-          table: node_field_data
-          field: title
+        field_publisher:
+          id: field_publisher
+          table: node__field_publisher
+          field: field_publisher
           relationship: none
           group_type: group
           admin_label: ''
-          entity_type: node
-          entity_field: title
           plugin_id: field
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -66,8 +61,8 @@ display:
             target: ''
             nl2br: false
             max_length: 0
-            word_boundary: false
-            ellipsis: false
+            word_boundary: true
+            ellipsis: true
             more_link: false
             more_link_text: ''
             more_link_path: ''
@@ -87,10 +82,57 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          entity_field: title
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            make_link: false
+            absolute: false
+            word_boundary: false
+            ellipsis: false
+            strip_tags: false
+            trim: false
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
           click_sort_column: value
           type: string
           settings:
-            link_to_entity: false
+            link_to_entity: true
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -101,76 +143,10 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_image:
-          id: field_image
-          table: media__field_image
-          field: field_image
-          relationship: field_image
-          group_type: group
-          admin_label: ''
-          plugin_id: field
-          label: ''
-          exclude: false
-          alter:
-            alter_text: true
-            text: '{{ field_image }}<span class="card-title">{{ title }}</span>'
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: card-image
-          element_default_classes: false
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: target_id
-          type: image
-          settings:
-            image_link: ''
-            image_style: card
-            image_loading:
-              attribute: lazy
-          group_column: ''
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-        field_summary:
-          id: field_summary
-          table: node__field_summary
-          field: field_summary
+        field_tags:
+          id: field_tags
+          table: node__field_tags
+          field: field_tags
           relationship: none
           group_type: group
           admin_label: ''
@@ -209,17 +185,18 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: card-content
-          element_default_classes: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -271,9 +248,9 @@ display:
           element_label_type: ''
           element_label_class: ''
           element_label_colon: false
-          element_wrapper_type: div
-          element_wrapper_class: card-action
-          element_default_classes: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
           empty: ''
           hide_empty: false
           empty_zero: false
@@ -281,10 +258,10 @@ display:
           click_sort_column: uri
           type: link
           settings:
-            trim_length: 80
+            trim_length: null
             url_only: false
             url_plain: false
-            rel: nofollow
+            rel: '0'
             target: '0'
           group_column: ''
           group_columns: {  }
@@ -296,16 +273,16 @@ display:
           multi_type: separator
           separator: ', '
           field_api_classes: false
-        field_topic:
-          id: field_topic
-          table: node__field_topic
-          field: field_topic
+        field_online:
+          id: field_online
+          table: node__field_online
+          field: field_online
           relationship: none
           group_type: group
           admin_label: ''
           plugin_id: field
           label: ''
-          exclude: true
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -346,8 +323,76 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: list_default
-          settings: {  }
+          type: boolean
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_previous_version_of_fate:
+          id: field_previous_version_of_fate
+          table: node__field_previous_version_of_fate
+          field: field_previous_version_of_fate
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: boolean
+          settings:
+            format: default
+            format_custom_false: ''
+            format_custom_true: ''
           group_column: value
           group_columns: {  }
           group_rows: true
@@ -362,7 +407,6 @@ display:
         type: none
         options:
           offset: 0
-          items_per_page: null
       exposed_form:
         type: basic
         options:
@@ -374,30 +418,43 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: perm
+        type: role
         options:
-          perm: 'access content'
+          role:
+            authenticated: authenticated
       cache:
         type: tag
         options: {  }
       empty: {  }
       sorts:
-        created:
-          id: created
+        field_publisher_target_id:
+          id: field_publisher_target_id
+          table: node__field_publisher
+          field: field_publisher_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: ASC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
+        title:
+          id: title
           table: node_field_data
-          field: created
+          field: title
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: node
-          entity_field: created
-          plugin_id: date
+          entity_field: title
+          plugin_id: standard
           order: ASC
           expose:
             label: ''
-            field_identifier: created
+            field_identifier: ''
           exposed: false
-          granularity: second
       arguments: {  }
       filters:
         status:
@@ -421,76 +478,73 @@ display:
           entity_field: type
           plugin_id: bundle
           value:
-            tutorial: tutorial
+            fate_books: fate_books
           expose:
             operator_limit_selection: false
             operator_list: {  }
-        field_topic_value:
-          id: field_topic_value
-          table: node__field_topic
-          field: field_topic_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: list_field
-          operator: or
-          value: {  }
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_topic_value_op
-            label: Topic
-            description: ''
-            use_operator: false
-            operator: field_topic_value_op
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: field_topic_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-              content_administrator: '0'
-              client_developer: '0'
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: 'Topic (field_topic)'
-            description: null
-            identifier: field_topic_value
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
-          reduce_duplicates: false
       style:
-        type: grid
+        type: table
         options:
-          grouping:
-            -
-              field: field_topic
-              rendered: false
-              rendered_strip: false
-          columns: 2
-          automatic_width: false
-          alignment: horizontal
-          row_class_custom: row
-          row_class_default: false
-          col_class_custom: 'col s12 m6'
-          col_class_default: true
+          grouping: {  }
+          row_class: ''
+          default_row_class: true
+          columns:
+            title: title
+            field_tags: field_tags
+            field_link: field_link
+            field_online: field_online
+            field_previous_version_of_fate: field_previous_version_of_fate
+            field_publisher: field_publisher
+          default: '-1'
+          info:
+            title:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_tags:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_link:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_online:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_previous_version_of_fate:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            field_publisher:
+              sortable: false
+              default_sort_order: asc
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+          override: true
+          sticky: false
+          summary: ''
+          empty_table: false
+          caption: ''
+          description: ''
       row:
         type: fields
         options:
-          default_field_elements: false
+          default_field_elements: true
           inline: {  }
           separator: ''
           hide_empty: false
@@ -502,82 +556,66 @@ display:
           distinct: false
           replica: false
           query_tags: {  }
-      relationships:
-        field_image:
-          id: field_image
-          table: node__field_image
-          field: field_image
-          relationship: none
-          group_type: group
-          admin_label: 'field_image: Media'
-          plugin_id: standard
-          required: false
-      header:
-        area:
-          id: area
-          table: views
-          field: area
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text
-          empty: false
-          content:
-            value: |2
-                        <div class="card blue darken-1">
-              <div class="card-content white-text">
-                            <span class="card-title">About tutorials</span>
-                            <p class="white-text">  Tutorials are pointers to other documentation resources. They are an aggregation of all the <strong>community documentation</strong> regarding decoupled architectures. You will find here a wide variety of documentation topics, from the JSON API server to the OAuth2 authentication, schema generation, and hand picked blog posts. If you want to suggest adding a new tutorial to this unstructured list, please open an issue on the GitHub issue queue.
-              </p>
-                          </div>
-                          <div class="card-action">
-                            <a href="https://github.com/contentacms/contenta_jsonapi/issues/new">Suggest a tutorial</a>
-                          </div>
-                        </div>
-            format: full_html
-          tokenize: false
+      relationships: {  }
+      header: {  }
       footer: {  }
-      display_extenders: {  }
+      display_extenders:
+        jsonapi_views:
+          enabled: true
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
-        - 'config:field.storage.media.field_image'
         - 'config:field.storage.node.field_link'
-        - 'config:field.storage.node.field_summary'
-        - 'config:field.storage.node.field_topic'
-  page_1:
-    id: page_1
-    display_title: Page
-    display_plugin: page
+        - 'config:field.storage.node.field_online'
+        - 'config:field.storage.node.field_previous_version_of_fate'
+        - 'config:field.storage.node.field_publisher'
+        - 'config:field.storage.node.field_tags'
+  data_export_1:
+    id: data_export_1
+    display_title: 'Data export'
+    display_plugin: data_export
     position: 1
     display_options:
-      display_extenders: {  }
-      path: help/tutorials
-      menu:
-        type: normal
-        title: Tutorials
-        description: 'List of external documentation sources.'
-        weight: 0
-        expanded: false
-        menu_name: contenta
-        parent: ''
-        context: '0'
+      style:
+        type: data_export
+        options:
+          formats:
+            csv: csv
+          csv_settings:
+            delimiter: ','
+            enclosure: '"'
+            escape_char: \
+            strip_tags: true
+            trim: true
+            encoding: utf8
+            utf8_bom: '0'
+            use_serializer_encode_only: false
+      display_extenders:
+        jsonapi_views:
+          enabled: true
+      path: dev/product/export
+      filename: ''
+      automatic_download: false
+      store_in_public_file_directory: null
+      custom_redirect_path: false
+      redirect_to_display: none
+      include_query_params: false
     cache_metadata:
       max-age: -1
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
-        - url
+        - request_format
         - 'user.node_grants:view'
-        - user.permissions
+        - user.roles
       tags:
-        - 'config:field.storage.media.field_image'
         - 'config:field.storage.node.field_link'
-        - 'config:field.storage.node.field_summary'
-        - 'config:field.storage.node.field_topic'
+        - 'config:field.storage.node.field_online'
+        - 'config:field.storage.node.field_previous_version_of_fate'
+        - 'config:field.storage.node.field_publisher'
+        - 'config:field.storage.node.field_tags'

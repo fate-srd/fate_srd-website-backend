@@ -1,0 +1,14 @@
+metatag_ai:
+  metadata_content_types:
+    article: article
+    app: 0
+    author: 0
+    download: 0
+    embeddable: 0
+    fate_books: 0
+    media: 0
+    page: 0
+    panel: 0
+    recipe: 0
+    tutorial: 0
+    webform: 0

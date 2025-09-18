@@ -1,4 +1,4 @@
-uuid: 48e842c7-9ff1-4eee-b9ec-4464092e2fc1
+uuid: 644622b6-8166-42db-bd2c-e393081bfe77
 langcode: en
 status: true
 dependencies:
@@ -90,7 +90,7 @@ resourceFields:
     fieldName: link
     publicName: link
     enhancer:
-      id: alias_link
+      id: ''
   external:
     disabled: false
     fieldName: external
@@ -143,5 +143,11 @@ resourceFields:
     disabled: false
     fieldName: revision_translation_affected
     publicName: revision_translation_affected
+    enhancer:
+      id: ''
+  metatag:
+    disabled: false
+    fieldName: metatag
+    publicName: metatag
     enhancer:
       id: ''

@@ -1,17 +1,17 @@
-uuid: e35b7283-b078-4f28-a372-de98ef3ecea0
+uuid: 5fd2eaa1-d8a7-429b-8c69-e440a40c27cc
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.metatags
+    - field.storage.node.field_metatag
     - node.type.article
   module:
     - metatag
-id: node.article.metatags
-field_name: metatags
+id: node.article.field_metatag
+field_name: field_metatag
 entity_type: node
 bundle: article
-label: Metatags
+label: 'Metatag AI'
 description: ''
 required: false
 translatable: false

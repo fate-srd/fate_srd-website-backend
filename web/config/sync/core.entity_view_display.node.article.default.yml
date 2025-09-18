@@ -6,8 +6,8 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment_node_article
     - field.field.node.article.field_image
+    - field.field.node.article.field_metatag
     - field.field.node.article.field_tags
-    - field.field.node.article.metatags
     - node.type.article
   module:
     - metatag
@@ -39,25 +39,17 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  links:
-    settings: {  }
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  metatags:
+  field_metatag:
     type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 4
+    weight: 5
     region: content
-  title:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
+  links:
+    settings: {  }
     third_party_settings: {  }
-    weight: 0
+    weight: 3
     region: content
 hidden:
   comment_node_article: true

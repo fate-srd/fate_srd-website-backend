@@ -1,0 +1,6 @@
+metatag_ai:
+  metatagai_endpoint: 'https://api.openai.com/v1/chat/completions'
+  metatagai_model: gpt-3.5-turbo
+  metatagai_max_token: '256'
+  metatagai_temperature: '1'
+  metatagai_max_context_length: '4096'

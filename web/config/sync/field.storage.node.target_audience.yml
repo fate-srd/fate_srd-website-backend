@@ -1,0 +1,36 @@
+uuid: 4391c852-40a2-45e6-a82d-b3c702336535
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.target_audience
+field_name: target_audience
+entity_type: node
+type: list_float
+settings:
+  allowed_values:
+    -
+      value: !!float 0
+      label: 'Prospective Students'
+    -
+      value: !!float 1
+      label: 'Enrolled Students'
+    -
+      value: !!float 2
+      label: Alumni
+    -
+      value: !!float 3
+      label: Faculty
+    -
+      value: !!float 4
+      label: Community
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
