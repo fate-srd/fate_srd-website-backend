@@ -14,10 +14,6 @@
         }
     ],
     "repositories": {
-        "lenient": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/lenient"
-        },
         "0": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
@@ -59,7 +55,8 @@
         "drupal/views_bulk_operations": "^4.1",
         "drupal/warmer": "^2.0",
         "drupal/environment_indicator": "^4.0",
-        "drupal/admin_toolbar": "^3.1"
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/linkit": "^6.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
