@@ -37,3 +37,18 @@ reference/*
 !reference/.gitkeep
 /.editorconfig
 /.gitattributes
+
+# DDEV-specific ignores
+.ddev/.gitignore
+.ddev/db_snapshots
+.ddev/sequelpro.spf
+.ddev/import.yaml
+.ddev/import-db
+.ddev/config.*.y*ml
+.ddev/docker-compose.*.y*ml
+.ddev/db-build
+.ddev/web-build
+.ddev/.dbimageBuild
+.ddev/.webimageBuild
+.ddev/.ddev-docker-compose-*
+.ddev/.ddev-docker-compose-base.yaml

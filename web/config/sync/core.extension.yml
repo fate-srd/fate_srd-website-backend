@@ -9,7 +9,7 @@ module:
   config: 0
   content_moderation: 0
   consumer_image_styles: 0
-  consumers: 0
+  # consumers: 0
   csv_serialization: 0
   ctools: 0
   datetime: 0
@@ -72,7 +72,7 @@ module:
   schemata: 0
   search: 0
   serialization: 0
-  simple_oauth: 0
+  # simple_oauth: 0
   single_content_sync: 0
   subrequests: 0
   syslog: 0

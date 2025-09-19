@@ -41,7 +41,6 @@
         "composer/installers": "^2.0",
         "webflo/drupal-finder": "^1.2",
         "webmozart/path-util": "^2.3",
-        "drupal/simple_oauth": "^6.0",
         "league/commonmark": "^1",
         "drupal/consumer_image_styles": "^4.0",
         "drupal/decoupled_router": "^2.0",
@@ -69,7 +68,7 @@
         "drupal/single_content_sync": "^1.4",
         "drupal/views_data_export": "^1.4",
         "drupal/upgrade_status": "^4.3",
-        "drush/drush": "^12.5"
+        "drush/drush": "^13.6"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
