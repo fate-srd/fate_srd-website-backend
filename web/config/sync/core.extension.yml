@@ -7,11 +7,11 @@ module:
   ckeditor5: 0
   comment: 0
   config: 0
+  content_moderation: 0
   consumer_image_styles: 0
   consumers: 0
   csv_serialization: 0
   ctools: 0
-  customfilter: 0
   datetime: 0
   datetime_range: 0
   dblog: 0
@@ -89,13 +89,14 @@ module:
   views_bulk_edit: 0
   views_bulk_operations: 0
   views_data_export: 0
+  workflows: 0
   menu_link_content: 1
   pathauto: 1
   gatsby: 100
-  contenta_jsonapi: 1000
+  standard: 1000
 theme:
   stable: 0
   classy: 0
   claro: 0
   gin: 0
-profile: contenta_jsonapi
+profile: standard
