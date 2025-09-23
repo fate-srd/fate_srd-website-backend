@@ -20,16 +20,16 @@
         }
     },
     "require": {
-        "drupal/core-composer-scaffold": "^9.3",
+        "drupal/core-composer-scaffold": "^10",
         "drupal/gin": "^3.0",
         "drupal/gin_toolbar": "^1.0@beta",
         "drupal/gin_login": "^1.0",
-        "drupal/core-project-message": "^9.3",
+        "drupal/core-project-message": "^10",
         "drupal/pathauto": "^1.8",
         "vlucas/phpdotenv": "^5.4",
         "cweagans/composer-patches": "^1.7",
         "drupal/menu_pager": "^3.0",
-        "drupal/pathologic": "^1.0@alpha",
+        "drupal/pathologic": "^2.0@alpha",
         "drupal/gatsby": "^1.0@RC",
         "drupal/jsonapi_views": "^1.0",
         "drupal/menu_normalizer": "^2.0",
@@ -41,9 +41,8 @@
         "composer/installers": "^2.0",
         "webflo/drupal-finder": "^1.2",
         "webmozart/path-util": "^2.3",
-        "drupal/simple_oauth": "5.2",
+        "drupal/simple_oauth": "^6.0",
         "league/commonmark": "^1",
-        "drupal/contentajs": "^2.0",
         "drupal/consumer_image_styles": "^4.0",
         "drupal/decoupled_router": "^2.0",
         "drupal/jsonapi_boost": "^2.0",
@@ -54,7 +53,6 @@
         "drupal/warmer": "^2.0",
         "drupal/environment_indicator": "^4.0",
         "drupal/admin_toolbar": "^3.1",
-        "drupal/csv_serialization": "^3.0",
         "drupal/next": "^1.6",
         "drupal/graphql": "^4.3",
         "drupal/graphql_compose": "^1.0@beta",
@@ -68,11 +66,9 @@
         "drupal/openapi_ui": "^1.0@RC",
         "drupal/openapi_ui_redoc": "^1.0@RC",
         "drupal/single_content_sync": "^1.4",
-        "drupal/views_data_export": "^1.6",
-        "drupal/core": "9.5.11",
-        "consolidation/site-alias": "^3.1.7",
-        "drupal/upgrade_status": "^4.3",
-        "drush/drush": "^11.6"
+        "consolidation/site-alias": "^4",
+        "drush/drush": "^12",
+        "drupal/core-recommended": "^10"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -129,13 +125,16 @@
             "drupal/core-composer-scaffold": true,
             "drupal/core-project-message": true,
             "cweagans/composer-patches": true,
-            "composer/installers": true
+            "composer/installers": true,
+            "php-http/discovery": true,
+            "phpstan/extension-installer": true,
+            "tbachert/spi": true
         },
         "platform": {
             "php": "8.2.0"
         }
     },
     "require-dev": {
-        "drupal/core-dev": "9.5.11"
+        "drupal/core-dev": "^10"
     }
 }

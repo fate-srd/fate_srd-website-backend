@@ -1,20 +1,10 @@
 name: fate-srd-backend
-recipe: drupal9
+recipe: drupal10
 config:
+  php: "8.3"
+  drush: ^11
+  composer_version: 2-latest
   webroot: web
-  database: mysql:8.0
-  php: 8.2
-# Create Drupal 7 database service, consider adding
-# https://www.drupal.org/docs/upgrading-drupal/upgrade-using-drush
 services:
-  d7db:
-    type: mysql
-    creds:
-      user: drupal7
-      password: drupal7
-      database: drupal7
-    portforward: true
-  appserver:
-    overrides:
-      environment:
-        DRUSH_OPTIONS_URI: "https://fate-srd-backend.lndo.site"
+  database:
+    type: mysql:8.0
