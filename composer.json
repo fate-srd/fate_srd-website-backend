@@ -29,7 +29,6 @@
         "drupal/pathauto": "^1.8",
         "vlucas/phpdotenv": "^5.4",
         "cweagans/composer-patches": "^1.7",
-        "drush/drush": "^11.0",
         "drupal/menu_pager": "^3.0",
         "drupal/pathologic": "^1.0@alpha",
         "drupal/gatsby": "^1.0@RC",

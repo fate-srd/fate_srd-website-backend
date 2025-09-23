@@ -1,18 +1,11 @@
-server_url: 'http://localhost:8000'
-preview_callback_url: 'http://localhost:8000/__refresh'
+_core:
+  default_config_hash: '-xBft7gLYifC9YdTJUXA0W_QNDfPVcU6D9NjOFCdjYU'
+server_url: ''
+preview_callback_url: ''
 path_mapping: ''
 incrementalbuild_url: ''
 build_published: true
-preview_entity_types:
-  comment: comment
-  consumer: consumer
-  file: file
-  media: media
-  node: node
-  path_alias: path_alias
-  oauth2_token: oauth2_token
-  taxonomy_term: taxonomy_term
-  user: user
-  menu_link_content: menu_link_content
-secret_key: ''
-legacy_preview_url: 0
+supported_entity_types: {  }
+delete_log_entities: null
+log_expiration: null
+log_published: null

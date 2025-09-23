@@ -3,17 +3,12 @@ langcode: en
 status: true
 dependencies:
   module:
-    - gatsby
     - menu_ui
 third_party_settings:
   menu_ui:
     available_menus:
       - main-menu
     parent: 'main-menu:'
-  gatsby:
-    preview: false
-    target: window
-    iframe: false
 name: 'Actual Play'
 type: media
 description: 'Videos, Podcasts, etc.'

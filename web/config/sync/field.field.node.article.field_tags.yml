@@ -6,6 +6,8 @@ dependencies:
     - field.storage.node.field_tags
     - node.type.article
     - taxonomy.vocabulary.fate_version
+  content:
+    - 'taxonomy_term:fate_version:10efa6c2-1af0-4c89-84a5-ab2399f0b261'
   enforced:
     module:
       - recipes_magazin
@@ -19,7 +21,9 @@ label: 'Fate Ruleset'
 description: 'Enter a comma-separated list of words to describe your content.'
 required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    target_uuid: 10efa6c2-1af0-4c89-84a5-ab2399f0b261
 default_value_callback: ''
 settings:
   handler: 'default:taxonomy_term'
@@ -28,4 +32,7 @@ settings:
       fate_version: fate_version
     sort:
       field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
 field_type: entity_reference

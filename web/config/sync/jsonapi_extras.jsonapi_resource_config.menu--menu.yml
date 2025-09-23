@@ -1,25 +1,18 @@
-uuid: 2cf70abf-dc57-4526-9838-2b2ce609f3ca
+uuid: 5c599145-6c55-4258-b0f4-9bd33c87c34d
 langcode: en
 status: true
 dependencies:
   module:
-    - rdf
-  enforced:
-    module:
-      - recipes_magazin
-_core:
-  default_config_hash: mG541a1yy5sRoj-03WJ72in_Hn9YRhbqo76iTTbHDQg
-id: rdf_mapping--rdf_mapping
-disabled: true
-path: rdf_mapping/rdf_mapping
-resourceType: rdf_mapping--rdf_mapping
+    - jsonapi_defaults
+    - system
+third_party_settings:
+  jsonapi_defaults:
+    page_limit: 50
+id: menu--menu
+disabled: false
+path: menu/menu
+resourceType: menu--menu
 resourceFields:
-  id:
-    disabled: false
-    fieldName: id
-    publicName: id
-    enhancer:
-      id: ''
   uuid:
     disabled: false
     fieldName: uuid
@@ -56,27 +49,27 @@ resourceFields:
     publicName: _core
     enhancer:
       id: ''
-  targetEntityType:
+  id:
     disabled: false
-    fieldName: targetEntityType
-    publicName: targetEntityType
+    fieldName: id
+    publicName: id
     enhancer:
       id: ''
-  bundle:
+  label:
     disabled: false
-    fieldName: bundle
-    publicName: bundle
+    fieldName: label
+    publicName: label
     enhancer:
       id: ''
-  types:
+  description:
     disabled: false
-    fieldName: types
-    publicName: types
+    fieldName: description
+    publicName: description
     enhancer:
       id: ''
-  fieldMappings:
+  locked:
     disabled: false
-    fieldName: fieldMappings
-    publicName: fieldMappings
+    fieldName: locked
+    publicName: locked
     enhancer:
       id: ''

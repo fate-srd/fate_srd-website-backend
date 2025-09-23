@@ -1,8 +1,8 @@
 uuid: b2f7c19f-3341-481a-9d79-5fdc954324d0
 langcode: en
 status: true
-dependencies: {}
-name: "MailChimp campaign"
+dependencies: {  }
+name: 'MailChimp campaign'
 format: mailchimp_campaign
 weight: 0
 filters:
@@ -11,5 +11,10 @@ filters:
     provider: filter
     status: true
     weight: 1
-    settings: {}
-  # Removed unknown filter plugin filter_null
+    settings: {  }
+  filter_null:
+    id: filter_null
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }

@@ -1,18 +1,18 @@
-uuid: 5247c62f-02fa-4056-91c7-3e9d470e8776
+uuid: 517e189b-9938-4f31-82dc-461692a1403d
 langcode: en
 status: true
 dependencies:
   module:
     - node
-id: articles
-label: Articles
+id: article
+label: Article
 type: 'canonical_entities:node'
 pattern: '[node:field_tags:0]/[node:title]'
 selection_criteria:
-  6b3135df-36d1-443e-aa42-ec09cdfb342a:
+  bb2d7697-9ca6-458c-a427-5637f3ce6840:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 6b3135df-36d1-443e-aa42-ec09cdfb342a
+    uuid: bb2d7697-9ca6-458c-a427-5637f3ce6840
     context_mapping:
       node: node
     bundles:

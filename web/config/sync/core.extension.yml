@@ -1,17 +1,13 @@
 module:
   admin_toolbar: 0
+  backup_migrate: 0
   basic_auth: 0
   block: 0
   breakpoint: 0
-  ckeditor: 0
-  color: 0
   comment: 0
   config: 0
   consumer_image_styles: 0
   consumers: 0
-  # contenta_enhancements was part of the Contenta profile; remove/disable
-  # If this module is still present in code, leaving it absent from this list disables it.
-  contentajs: 0
   ctools: 0
   customfilter: 0
   datetime: 0
@@ -29,7 +25,6 @@ module:
   gatsby_extras: 0
   gin_login: 0
   gin_toolbar: 0
-  hal: 0
   help: 0
   image: 0
   inline_entity_form: 0
@@ -40,11 +35,9 @@ module:
   jsonapi_extras: 0
   jsonapi_resources: 0
   jsonapi_views: 0
-  jsonrpc: 0
-  jsonrpc_core: 0
-  jsonrpc_discovery: 0
   language: 0
   link: 0
+  linkit: 0
   markdown: 0
   media: 0
   media_library: 0
@@ -56,14 +49,11 @@ module:
   metatag_twitter_cards: 0
   migrate: 0
   migrate_drupal: 0
-  migrate_drupal_ui: 0
   migrate_plus: 0
-  migrate_tools: 0
   migrate_upgrade: 0
   mysql: 0
   node: 0
   openapi: 0
-  openapi_jsonapi: 0
   openapi_ui: 0
   openapi_ui_redoc: 0
   options: 0
@@ -71,11 +61,10 @@ module:
   path: 0
   path_alias: 0
   pathologic: 0
-  rdf: 0
-  # recipes_magazin module is missing from codebase; remove to allow import
+  recipes_magazin: 0
   responsive_image: 0
   schemata: 0
-  schemata_json_schema: 0
+  search: 0
   serialization: 0
   simple_oauth: 0
   subrequests: 0
@@ -97,13 +86,10 @@ module:
   menu_link_content: 1
   pathauto: 1
   gatsby: 100
-  gatsby_instantpreview: 100
-  gatsby_fastbuilds: 101
-  # Remove Contenta profile module entry
 theme:
   stable: 0
   classy: 0
-  # material_admin theme is missing from codebase; remove to allow import
+  material_admin: 0
   claro: 0
   gin: 0
 profile: standard

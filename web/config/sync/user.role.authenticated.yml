@@ -9,7 +9,6 @@ dependencies:
     - filter.format.restricted_html
   module:
     - filter
-    - gatsby_fastbuilds
     - node
     - openapi
     - system
@@ -21,14 +20,11 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access openapi api docs'
-  - 'administer gatsby log entity entities'
   - 'administer menu'
   - 'administer nodes'
   - 'administer site configuration'
-  - 'sync gatsby fastbuild log entities'
   - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format full_html'
   - 'use text format restricted_html'
-  - 'view gatsby log entity entities'
   - 'view update notifications'
