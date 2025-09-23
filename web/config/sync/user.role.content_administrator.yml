@@ -5,6 +5,7 @@ dependencies:
   config:
     - filter.format.full_html
   module:
+    - file
     - filter
     - media
     - node
@@ -22,4 +23,5 @@ permissions:
   - 'administer menu'
   - 'administer taxonomy'
   - 'bypass node access'
+  - 'delete own files'
   - 'use text format full_html'

@@ -40,13 +40,5 @@ content:
   links:
     weight: 101
     region: content
-  title:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: -5
-    region: content
 hidden:
   langcode: true

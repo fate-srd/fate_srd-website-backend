@@ -53,6 +53,8 @@ content:
     settings:
       responsive_image_style: 3_2_image
       image_link: ''
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 3
     region: content
@@ -116,14 +118,6 @@ content:
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  title:
-    type: string
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    weight: -5
     region: content
 hidden:
   field_author: true

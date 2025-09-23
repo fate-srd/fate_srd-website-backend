@@ -7,3 +7,4 @@ scheme_allow_list:
   - internal
 protocol_style: path
 local_paths: ''
+keep_language_prefix: false

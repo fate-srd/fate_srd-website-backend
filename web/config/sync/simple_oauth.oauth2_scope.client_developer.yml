@@ -1,0 +1,18 @@
+uuid: 095b9ec0-47ab-491b-9874-da8c9609786c
+langcode: en
+status: true
+dependencies: {  }
+id: client_developer
+name: client_developer
+description: 'Client developer'
+grant_types:
+  authorization_code:
+    status: true
+  client_credentials:
+    status: true
+  refresh_token:
+    status: true
+umbrella: false
+parent: null
+granularity_id: null
+granularity_configuration: {  }

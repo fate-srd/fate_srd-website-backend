@@ -12,19 +12,19 @@ type: list_float
 settings:
   allowed_values:
     -
-      value: !!float 0
+      value: 0.0
       label: 'Prospective Students'
     -
-      value: !!float 1
+      value: 1.0
       label: 'Enrolled Students'
     -
-      value: !!float 2
+      value: 2.0
       label: Alumni
     -
-      value: !!float 3
+      value: 3.0
       label: Faculty
     -
-      value: !!float 4
+      value: 4.0
       label: Community
   allowed_values_function: ''
 module: options

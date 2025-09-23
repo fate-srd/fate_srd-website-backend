@@ -808,3 +808,8 @@ $settings['install_profile'] = 'standard';
 // Drush and the kernel don't try to resolve the missing Contenta profile.
 $config['core.extension']['profile'] = 'standard';
 $settings['profile'] = 'standard';
+// Automatically generated include for settings managed by ddev.
+$ddev_settings = __DIR__ . '/settings.ddev.php';
+if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
+  require $ddev_settings;
+}

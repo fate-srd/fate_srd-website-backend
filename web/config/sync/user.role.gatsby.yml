@@ -1,9 +1,12 @@
 uuid: 4b21e246-377c-4022-9866-4b878722f6c0
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - file
 id: gatsby
 label: gatsby
 weight: 6
 is_admin: null
-permissions: {  }
+permissions:
+  - 'delete own files'

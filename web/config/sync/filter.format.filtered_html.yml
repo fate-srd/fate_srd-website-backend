@@ -6,12 +6,6 @@ name: 'Filtered HTML'
 format: filtered_html
 weight: -6
 filters:
-  filter_null:
-    id: filter_null
-    provider: filter
-    status: true
-    weight: 0
-    settings: {  }
   filter_autop:
     id: filter_autop
     provider: filter

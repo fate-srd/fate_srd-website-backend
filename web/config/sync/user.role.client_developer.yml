@@ -5,6 +5,7 @@ dependencies:
   config:
     - filter.format.full_html
   module:
+    - file
     - filter
     - openapi
     - simple_oauth
@@ -18,5 +19,6 @@ permissions:
   - 'access user profiles'
   - 'administer menu'
   - 'administer simple_oauth entities'
+  - 'delete own files'
   - 'grant simple_oauth codes'
   - 'use text format full_html'

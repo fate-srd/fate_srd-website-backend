@@ -1,0 +1,18 @@
+uuid: 4d8d7565-1960-4182-8736-a081487d3cb5
+langcode: en
+status: true
+dependencies: {  }
+id: nextjs
+name: nextjs
+description: NextJS
+grant_types:
+  authorization_code:
+    status: true
+  client_credentials:
+    status: true
+  refresh_token:
+    status: true
+umbrella: false
+parent: null
+granularity_id: null
+granularity_configuration: {  }

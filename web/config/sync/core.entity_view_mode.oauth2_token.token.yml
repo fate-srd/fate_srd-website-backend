@@ -6,5 +6,6 @@ dependencies:
     - simple_oauth
 id: oauth2_token.token
 label: Token
+description: ''
 targetEntityType: oauth2_token
 cache: true

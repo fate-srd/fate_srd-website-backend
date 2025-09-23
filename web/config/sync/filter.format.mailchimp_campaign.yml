@@ -12,9 +12,3 @@ filters:
     status: true
     weight: 1
     settings: {  }
-  filter_null:
-    id: filter_null
-    provider: filter
-    status: true
-    weight: 0
-    settings: {  }
