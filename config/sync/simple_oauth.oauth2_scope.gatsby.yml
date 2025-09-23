@@ -1,0 +1,18 @@
+uuid: 134c1391-a7bb-41e4-94e3-3fc32b763a38
+langcode: en
+status: true
+dependencies: {  }
+id: gatsby
+name: gatsby
+description: gatsby
+grant_types:
+  authorization_code:
+    status: true
+  client_credentials:
+    status: true
+  refresh_token:
+    status: true
+umbrella: false
+parent: null
+granularity_id: null
+granularity_configuration: {  }

@@ -1,0 +1,18 @@
+uuid: ccf39aff-e9f9-4cd2-bd6b-553c9d2a40eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main-menu
+    parent: 'main-menu:'
+name: 'Actual Play'
+type: media
+description: 'Videos, Podcasts, etc.'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: false

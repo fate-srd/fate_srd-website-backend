@@ -800,14 +800,6 @@ if (file_exists($app_root . '/' . $site_path . '/settings.live.php')) {
 
 $settings['config_sync_directory'] = 'config/sync';
 $config['system.logging']['error_level'] = 'verbose';
-
-// Force install profile to a valid profile to avoid missing Contenta errors.
-// This can be removed after configuration is imported and caches are cleared.
-$settings['install_profile'] = 'standard';
-// Also override the active configuration's profile during bootstrap so that
-// Drush and the kernel don't try to resolve the missing Contenta profile.
-$config['core.extension']['profile'] = 'standard';
-$settings['profile'] = 'standard';
 // Automatically generated include for settings managed by ddev.
 $ddev_settings = __DIR__ . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {

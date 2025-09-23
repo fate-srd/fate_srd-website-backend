@@ -1,0 +1,31 @@
+uuid: 072ef80e-e3a7-46df-ab35-d94d5044e3f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.fate_books.comment_node_fate_books
+    - field.field.node.fate_books.field_link
+    - field.field.node.fate_books.field_online
+    - field.field.node.fate_books.field_previous_version_of_fate
+    - field.field.node.fate_books.field_publisher
+    - node.type.fate_books
+  module:
+    - user
+id: node.fate_books.teaser
+targetEntityType: node
+bundle: fate_books
+mode: teaser
+content:
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_fate_books: true
+  field_link: true
+  field_online: true
+  field_previous_version_of_fate: true
+  field_publisher: true
+  langcode: true

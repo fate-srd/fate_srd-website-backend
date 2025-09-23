@@ -1,0 +1,8 @@
+uuid: 83185ede-c43a-418b-9a47-43777f1bc448
+langcode: en
+status: true
+dependencies: {  }
+id: menu-fate-main-menu
+label: 'Fate Main Menu'
+description: ''
+locked: false

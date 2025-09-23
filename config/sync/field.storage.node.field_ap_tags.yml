@@ -1,0 +1,20 @@
+uuid: db054778-1e7c-4e65-8c0d-8a24a8c43e8d
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ap_tags
+field_name: field_ap_tags
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

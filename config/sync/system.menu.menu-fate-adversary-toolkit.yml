@@ -1,0 +1,8 @@
+uuid: fe98bea9-87f3-4ef8-9991-a979c5be32ba
+langcode: en
+status: true
+dependencies: {  }
+id: menu-fate-adversary-toolkit
+label: 'Fate Adversary Toolkit'
+description: ''
+locked: false

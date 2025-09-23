@@ -1,0 +1,8 @@
+uuid: 2f0bd0fe-9faa-4443-b9ea-7d68031d6d09
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_download
+label: 'Download comment'
+target_entity_type_id: node
+description: null

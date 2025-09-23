@@ -1,0 +1,8 @@
+uuid: 0934d18f-381e-43d1-8317-d61d143f7626
+langcode: en
+status: true
+dependencies: {  }
+id: menu-fate-accelerated
+label: 'Fate Accelerated'
+description: ''
+locked: false

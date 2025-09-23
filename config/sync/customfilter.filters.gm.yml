@@ -1,0 +1,47 @@
+uuid: be050df3-3b42-4782-9429-3dc69df8c3d0
+langcode: en
+status: true
+dependencies: {  }
+id: gm
+name: 'RPG Abbreviations'
+cache: false
+description: ''
+shorttip: 'I am short tips'
+longtip: 'I am full tips'
+rules:
+  gm:
+    rid: gm
+    prid: ''
+    fid: gm
+    name: GM
+    description: ''
+    enabled: true
+    matches: null
+    pattern: '/\[GM\]/i'
+    replacement: '<abbr title="Gamemaster">GM</abbr>'
+    code: false
+    weight: 0
+  npc:
+    rid: npc
+    prid: ''
+    fid: gm
+    name: NPC
+    description: ''
+    enabled: true
+    matches: null
+    pattern: '/\[NPC\]/i'
+    replacement: '<abbr title="Nonplayer Character">NPC</abbr>'
+    code: false
+    weight: 0
+  pc:
+    rid: pc
+    prid: ''
+    fid: gm
+    name: PC
+    description: ''
+    enabled: true
+    matches: null
+    pattern: '/\[PC\]/i'
+    replacement: '<abbr title="Player Character">PC</abbr>'
+    code: false
+    weight: 0

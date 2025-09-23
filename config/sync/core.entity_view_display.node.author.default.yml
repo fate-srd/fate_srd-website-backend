@@ -1,0 +1,57 @@
+uuid: 71e9e724-0690-4e76-8a57-448b3e3b3cbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_author.default
+    - field.field.node.author.body
+    - field.field.node.author.comment_node_author
+    - field.field.node.author.field_link
+    - field.field.node.author.field_tags
+    - node.type.author
+  module:
+    - comment
+    - link
+    - text
+    - user
+id: node.author.default
+targetEntityType: node
+bundle: author
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  comment_node_author:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_tags: true
+  langcode: true

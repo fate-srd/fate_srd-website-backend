@@ -1,0 +1,12 @@
+uuid: ddc9e69e-fef4-44c0-ab10-eff0549d3fa1
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: nextjs
+label: NextJS
+weight: 5
+is_admin: null
+permissions:
+  - 'delete own files'

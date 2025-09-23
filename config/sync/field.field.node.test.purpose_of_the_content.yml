@@ -1,0 +1,21 @@
+uuid: 58dc4404-386c-4c2d-83ab-b4a39b89f82d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.purpose_of_the_content
+    - node.type.test
+  module:
+    - text
+id: node.test.purpose_of_the_content
+field_name: purpose_of_the_content
+entity_type: node
+bundle: test
+label: 'Purpose of the content'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

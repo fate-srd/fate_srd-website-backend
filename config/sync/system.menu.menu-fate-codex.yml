@@ -1,0 +1,8 @@
+uuid: b044d6cc-84dd-4583-b0ae-982fd60192a7
+langcode: en
+status: true
+dependencies: {  }
+id: menu-fate-codex
+label: 'Fate Codex'
+description: ''
+locked: false

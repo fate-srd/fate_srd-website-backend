@@ -1,0 +1,38 @@
+uuid: 6e8a4d3a-eb93-4ed4-9a3f-f41e5ad8ae62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.article
+    - taxonomy.vocabulary.fate_version
+  content:
+    - 'taxonomy_term:fate_version:10efa6c2-1af0-4c89-84a5-ab2399f0b261'
+  enforced:
+    module:
+      - recipes_magazin
+_core:
+  default_config_hash: OprxmxWchgfuGBRnpbC_YUUv6yKt9-UzXVWeWS_oTQk
+id: node.article.field_tags
+field_name: field_tags
+entity_type: node
+bundle: article
+label: 'Fate Ruleset'
+description: 'Enter a comma-separated list of words to describe your content.'
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 10efa6c2-1af0-4c89-84a5-ab2399f0b261
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      fate_version: fate_version
+    sort:
+      field: _none
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

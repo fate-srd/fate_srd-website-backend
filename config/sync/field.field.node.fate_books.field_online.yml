@@ -1,0 +1,23 @@
+uuid: 0b21c5ac-cfa4-4e98-b0c4-090880ce4286
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_online
+    - node.type.fate_books
+id: node.fate_books.field_online
+field_name: field_online
+entity_type: node
+bundle: fate_books
+label: 'Play Online'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Play Online'
+  off_label: ''
+field_type: boolean
