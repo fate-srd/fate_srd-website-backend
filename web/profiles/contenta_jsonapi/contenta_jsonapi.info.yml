@@ -1,0 +1,5 @@
+name: Contenta JSON:API (stub)
+type: profile
+description: Temporary stub to allow switching away from Contenta.
+core_version_requirement: ^9 || ^10
+install: []

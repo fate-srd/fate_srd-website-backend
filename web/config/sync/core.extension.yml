@@ -9,7 +9,8 @@ module:
   config: 0
   consumer_image_styles: 0
   consumers: 0
-  contenta_enhancements: 0
+  # contenta_enhancements was part of the Contenta profile; remove/disable
+  # If this module is still present in code, leaving it absent from this list disables it.
   contentajs: 0
   ctools: 0
   customfilter: 0
@@ -71,7 +72,7 @@ module:
   path_alias: 0
   pathologic: 0
   rdf: 0
-  recipes_magazin: 0
+  # recipes_magazin module is missing from codebase; remove to allow import
   responsive_image: 0
   schemata: 0
   schemata_json_schema: 0
@@ -98,11 +99,11 @@ module:
   gatsby: 100
   gatsby_instantpreview: 100
   gatsby_fastbuilds: 101
-  contenta_jsonapi: 1000
+  # Remove Contenta profile module entry
 theme:
   stable: 0
   classy: 0
-  material_admin: 0
+  # material_admin theme is missing from codebase; remove to allow import
   claro: 0
   gin: 0
-profile: contenta_jsonapi
+profile: standard

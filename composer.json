@@ -14,11 +14,7 @@
         }
     ],
     "repositories": {
-        "lenient": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/lenient"
-        },
-        "0": {
+        "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
         }
@@ -59,7 +55,22 @@
         "drupal/views_bulk_operations": "^4.1",
         "drupal/warmer": "^2.0",
         "drupal/environment_indicator": "^4.0",
-        "drupal/admin_toolbar": "^3.1"
+        "drupal/admin_toolbar": "^3.1",
+        "drupal/csv_serialization": "^3.0",
+        "drupal/next": "^1.6",
+        "drupal/graphql": "^4.3",
+        "drupal/graphql_compose": "^1.0@beta",
+        "drupal/inline_entity_form": "^3.0@RC",
+        "drupal/jsonapi_menu_items": "^1.2",
+        "drupal/linkit": "^6.0",
+        "drupal/metatag_ai": "^1.0",
+        "drupal/migrate_plus": "^6.0",
+        "drupal/migrate_tools": "^6.1",
+        "drupal/migrate_upgrade": "^4.0",
+        "drupal/openapi_ui": "^1.0@RC",
+        "drupal/openapi_ui_redoc": "^1.0@RC",
+        "drupal/single_content_sync": "^1.4",
+        "drupal/views_data_export": "^1.6"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,

@@ -1,30 +1,25 @@
 uuid: 919dd68b-f29c-49c3-97b8-5f4df9aacbd5
 langcode: en
 status: true
-dependencies: {  }
-name: 'Filtered HTML'
+dependencies: {}
+name: "Filtered HTML"
 format: filtered_html
 weight: -6
 filters:
-  filter_null:
-    id: filter_null
-    provider: filter
-    status: true
-    weight: 0
-    settings: {  }
+  # Removed unknown filter plugin filter_null
   filter_autop:
     id: filter_autop
     provider: filter
     status: true
     weight: 2
-    settings: {  }
+    settings: {}
   filter_html:
     id: filter_html
     provider: filter
     status: true
     weight: 1
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd>'
+      allowed_html: "<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd>"
       filter_html_help: true
       filter_html_nofollow: false
   filter_htmlcorrector:
@@ -32,7 +27,7 @@ filters:
     provider: filter
     status: true
     weight: 10
-    settings: {  }
+    settings: {}
   filter_url:
     id: filter_url
     provider: filter
