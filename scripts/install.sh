@@ -28,9 +28,9 @@ fi
 DOCROOT="web"
 
 echo "-----------------------------------------------"
-echo " Installing Contenta CMS for local usage "
+echo " Installing Drupal (standard profile) for local usage "
 echo "-----------------------------------------------"
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH site-install contenta_jsonapi --verbose --yes \\
+echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH site-install standard --verbose --yes \\
   --root=$DEST_DIR/$DOCROOT \\
   --db-url=$DB_URL_REDACTED \\
   --site-mail=$SITE_MAIL \\
@@ -39,7 +39,7 @@ echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH site-install contenta_jsonapi -
   --account-name=$ACCOUNT_NAME \\
   --account-pass=\"[REDACTED]\";\n\n"
 
-$DRUSH site-install contenta_jsonapi --verbose --yes \
+$DRUSH site-install standard --verbose --yes \
   --root=$DEST_DIR/$DOCROOT \
   --db-url=$DB_URL \
   --site-mail=$SITE_MAIL \
@@ -49,14 +49,11 @@ $DRUSH site-install contenta_jsonapi --verbose --yes \
   --account-pass="$ACCOUNT_PASS";
 
 if [ $? -ne 0 ]; then
-  echo -e "${FG_C}${EBG_C} ERROR ${NO_C} The Drupal installer failed to install Contenta CMS."
+  echo -e "${FG_C}${EBG_C} ERROR ${NO_C} The Drupal installer failed to install the standard profile."
   exit 3
 fi
 
 
 mkdir -p $DEST_DIR/$DOCROOT/sites/default/files/tmp;
 
-echo -e "${FG_C}${BG_C} EXECUTING ${NO_C} $DRUSH en -y recipes_magazin contentajs\n\n"
-$DRUSH en -y recipes_magazin contentajs
-
-echo -e "${FG_C}${BG_C} 🎉 ${NO_C} Contenta CMS was installed! Your admin password is: $ACCOUNT_PASS\n\n"
+echo -e "${FG_C}${BG_C} 🎉 ${NO_C} Drupal (standard) was installed! Your admin password is: $ACCOUNT_PASS\n\n"

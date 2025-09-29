@@ -1,0 +1,23 @@
+uuid: d4abccb5-2083-49e6-833d-e179b6664057
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hosted_elsewhere
+    - node.type.download
+id: node.download.field_hosted_elsewhere
+field_name: field_hosted_elsewhere
+entity_type: node
+bundle: download
+label: 'Hosted Elsewhere'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

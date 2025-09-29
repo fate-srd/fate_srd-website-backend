@@ -1,0 +1,21 @@
+uuid: 94b13609-92e4-4641-8948-dfbc2a6a6f0f
+langcode: en
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - gin
+id: searchform
+theme: gin
+region: header
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: visible
+  provider: search
+  page_id: null
+visibility: {  }

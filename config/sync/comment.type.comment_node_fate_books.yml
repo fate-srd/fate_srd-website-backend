@@ -1,0 +1,8 @@
+uuid: 7b5c108e-60e3-43a9-b633-0ccba785badf
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_fate_books
+label: 'Fate products comment'
+target_entity_type_id: node
+description: null
