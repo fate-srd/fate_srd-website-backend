@@ -20,18 +20,18 @@
         }
     },
     "require": {
-        "drupal/core-composer-scaffold": "^10",
+        "drupal/core-composer-scaffold": "^11",
         "drupal/gin": "^3.0",
         "drupal/gin_toolbar": "^1.0@beta",
         "drupal/gin_login": "^2.1",
-        "drupal/core-project-message": "^10",
+        "drupal/core-project-message": "^11",
         "drupal/pathauto": "^1.8",
         "vlucas/phpdotenv": "^5.4",
         "cweagans/composer-patches": "^1.7",
         "drupal/menu_pager": "^3.0",
         "drupal/pathologic": "^2.0@alpha",
         "drupal/jsonapi_views": "^1.0",
-        "drupal/menu_normalizer": "^2.0",
+        "drupal/menu_normalizer": "^2.1",
         "drupal/typed_data": "^2.1",
         "drupal/views_bulk_edit": "^3.0",
         "drupal/backup_migrate": "^5.0",
@@ -60,11 +60,8 @@
         "drupal/openapi_ui_redoc": "^1.0@RC",
         "drupal/single_content_sync": "^1.4",
         "consolidation/site-alias": "^4",
-        "drupal/core-recommended": "^10",
-        "drupal/upgrade_status": "^4.3",
-        "drush/drush": "^13.6",
-        "drupal/markdown": "^3.0",
-        "drupal/customfilter": "^2.0"
+        "drupal/core-recommended": "^11",
+        "drush/drush": "^13"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -109,6 +106,9 @@
             "drupal/jsonapi": {
                 "Fix menu problems": "https://www.drupal.org/files/issues/2020-05-13/2915792-47.patch",
                 "Fix menu problems more": "https://www.drupal.org/files/issues/2020-05-19/3066751-32-with_issue_2915792.patch"
+            },
+            "drupal/menu_normalizer": {
+                "Fix menu problems": "https://www.drupal.org/files/issues/2025-03-28/3495440-normalizer-support.patch"
             }
         }
     },
@@ -127,10 +127,10 @@
             "tbachert/spi": true
         },
         "platform": {
-            "php": "8.2.0"
+            "php": "8.3.25"
         }
     },
     "require-dev": {
-        "drupal/core-dev": "10.2.12"
+        "drupal/core-dev": "^11"
     }
 }

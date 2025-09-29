@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.media.original_image_size
     - core.entity_view_mode.media.token
   module:
-    - customfilter
     - editor
     - media
     - pathologic
