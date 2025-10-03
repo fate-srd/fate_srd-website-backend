@@ -9,6 +9,7 @@ dependencies:
     - text
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: 9aAh_9w52R-VtvQQhVneMNXdtZc2Mlab6VChpPHGBEM
 id: comment.comment.comment_body

@@ -4,6 +4,7 @@ status: true
 dependencies:
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: xxcjX6pBiiIcnr0DJAHV7iT_xUzThaCM6AaJ5ejC6xk
 name: Category

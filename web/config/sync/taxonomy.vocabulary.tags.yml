@@ -4,6 +4,7 @@ status: true
 dependencies:
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: 31AS2UCBtmvLaDJVkoahnj-_iu8CWDUsF7UfukxSJu8
 name: Tags

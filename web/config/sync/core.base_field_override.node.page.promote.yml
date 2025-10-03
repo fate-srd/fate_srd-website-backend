@@ -6,6 +6,7 @@ dependencies:
     - node.type.page
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: VkwTCNmnFNIIozVgSNnC9lFeoHWxxyZo44bpav4oIGA
 id: node.page.promote

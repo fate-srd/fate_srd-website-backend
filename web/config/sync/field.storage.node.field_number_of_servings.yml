@@ -6,6 +6,7 @@ dependencies:
     - node
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: OWJrX3eJcF466mgrciJwkJdcL-Nsth33tIPy_dieE80
 id: node.field_number_of_servings

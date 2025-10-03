@@ -21,6 +21,7 @@ dependencies:
     - text
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: hKcXM5_FIfXd8zk20lczrUEluwLqPQa545CkykQO2vg
 id: node.recipe.default

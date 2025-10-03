@@ -6,6 +6,7 @@ dependencies:
     - node
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: dvSrrJ4Bn1U8XFscQcJn1kgy_o6IhmLT2fZWQt2I-F4
 id: node.reference

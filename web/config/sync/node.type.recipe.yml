@@ -6,6 +6,7 @@ dependencies:
     - menu_ui
   enforced:
     module:
+      - recipes_magazin
 third_party_settings:
   menu_ui:
     available_menus: {  }

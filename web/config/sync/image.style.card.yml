@@ -5,6 +5,7 @@ dependencies:
   enforced:
     module:
       - image
+      - recipes_magazin
 _core:
   default_config_hash: aTeJ8jhBwUD84SRVBqpP4mUxUlYYV35PKXESPBImv_g
 name: card

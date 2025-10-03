@@ -6,6 +6,6 @@ dependencies:
     - user
 id: user.register
 label: Register
-description: ''
+description: null
 targetEntityType: user
 cache: true

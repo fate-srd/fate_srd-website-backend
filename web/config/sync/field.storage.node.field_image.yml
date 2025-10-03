@@ -7,6 +7,7 @@ dependencies:
     - node
   enforced:
     module:
+      - recipes_magazin
       - image
 _core:
   default_config_hash: COqB8CmVnGy9buJWa740g_NbCeyT2RiJHU5LoFcZwOw

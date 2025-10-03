@@ -6,6 +6,7 @@ dependencies:
     - node
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: V8YjZCDk3t6qquX66CMhY8q8CSNep4yTYH7oaTbu3js
 id: node.field_ingredients

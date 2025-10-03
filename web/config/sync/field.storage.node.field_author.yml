@@ -7,6 +7,7 @@ dependencies:
     - user
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: c_kMNoRCcpM5k0i5-8rKW7qr90Tp9HbrZesD_MBdd0s
 id: node.field_author

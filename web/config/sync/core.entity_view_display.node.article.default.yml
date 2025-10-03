@@ -15,6 +15,7 @@ dependencies:
     - user
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: a6FL8eNis9oIKMTSGug58B_vgym7syEOS4HBYbCPhyM
 id: node.article.default

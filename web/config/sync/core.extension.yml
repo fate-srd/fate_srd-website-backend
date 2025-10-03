@@ -4,6 +4,7 @@ module:
   basic_auth: 0
   block: 0
   breakpoint: 0
+  ckeditor5: 0
   comment: 0
   config: 0
   consumer_image_styles: 0
@@ -69,7 +70,6 @@ module:
   token: 0
   toolbar: 0
   typed_data: 0
-  update: 0
   user: 0
   views: 0
   views_bulk_edit: 0

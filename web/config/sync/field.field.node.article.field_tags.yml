@@ -10,6 +10,7 @@ dependencies:
     - 'taxonomy_term:fate_version:10efa6c2-1af0-4c89-84a5-ab2399f0b261'
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: OprxmxWchgfuGBRnpbC_YUUv6yKt9-UzXVWeWS_oTQk
 id: node.article.field_tags

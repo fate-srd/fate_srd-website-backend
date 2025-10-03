@@ -5,6 +5,7 @@ dependencies:
   enforced:
     module:
       - image
+      - recipes_magazin
 _core:
   default_config_hash: n-2RXAaGAS3xYr2qjP1v-AyPj26kmE7lvA3pRE86YZ4
 name: scale_crop_7_3_large

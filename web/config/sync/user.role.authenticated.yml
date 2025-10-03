@@ -13,7 +13,6 @@ dependencies:
     - node
     - openapi
     - system
-    - update
 id: authenticated
 label: 'authenticated user'
 weight: 1
@@ -29,4 +28,3 @@ permissions:
   - 'use text format filtered_html'
   - 'use text format full_html'
   - 'use text format restricted_html'
-  - 'view update notifications'

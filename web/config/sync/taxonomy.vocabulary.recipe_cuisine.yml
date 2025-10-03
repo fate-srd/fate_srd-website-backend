@@ -4,6 +4,7 @@ status: true
 dependencies:
   enforced:
     module:
+      - recipes_magazin
 _core:
   default_config_hash: TtVgi6-7vGCp3_t2kELTQ4btSN4W30aEgvnfgRjO_SY
 name: 'Recipe cuisine'
