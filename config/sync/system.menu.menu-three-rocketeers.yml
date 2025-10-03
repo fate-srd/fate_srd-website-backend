@@ -1,8 +1,0 @@
-uuid: 06cf14dd-01ea-4dcd-8162-97a7bb74ecf1
-langcode: en
-status: true
-dependencies: {  }
-id: menu-three-rocketeers
-label: 'Three Rocketeers'
-description: ''
-locked: false

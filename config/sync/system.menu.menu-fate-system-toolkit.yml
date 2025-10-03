@@ -1,8 +1,0 @@
-uuid: 683b4693-5914-4524-8b51-95362d1ea442
-langcode: en
-status: true
-dependencies: {  }
-id: menu-fate-system-toolkit
-label: 'Fate System Toolkit'
-description: ''
-locked: false

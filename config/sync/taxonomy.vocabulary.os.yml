@@ -1,8 +1,0 @@
-uuid: 09103a0e-859f-4e7a-93cf-a0dfee4730ec
-langcode: en
-status: true
-dependencies: {  }
-name: OS
-vid: os
-description: ''
-weight: 0

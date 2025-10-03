@@ -1,8 +1,0 @@
-uuid: 82efb24b-bb1b-405c-adf9-8f39ec8a5f8c
-langcode: en
-status: true
-dependencies: {  }
-id: comment_node_article
-label: 'Article comment'
-target_entity_type_id: node
-description: null

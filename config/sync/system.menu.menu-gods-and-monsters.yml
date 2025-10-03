@@ -1,8 +1,0 @@
-uuid: 608c16d6-72a2-4d2f-b36d-ded6edc0580f
-langcode: en
-status: true
-dependencies: {  }
-id: menu-gods-and-monsters
-label: 'Gods and Monsters'
-description: ''
-locked: false

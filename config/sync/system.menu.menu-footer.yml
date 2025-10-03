@@ -1,8 +1,0 @@
-uuid: b698ca11-0a7a-4d9d-b671-67d3f91f80c6
-langcode: en
-status: true
-dependencies: {  }
-id: menu-footer
-label: Footer
-description: ''
-locked: false

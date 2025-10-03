@@ -1,8 +1,0 @@
-uuid: b501203a-518e-49de-8dc6-e6e162e7929b
-langcode: en
-status: true
-dependencies: {  }
-id: fate-accessibility-toolkit
-label: 'Fate Accessibility Toolkit'
-description: ''
-locked: false

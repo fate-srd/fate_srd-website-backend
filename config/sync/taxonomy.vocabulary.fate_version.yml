@@ -1,8 +1,0 @@
-uuid: 01c15c76-3d9f-44d2-a387-e8e495530f24
-langcode: en
-status: true
-dependencies: {  }
-name: 'Fate Ruleset Version'
-vid: fate_version
-description: ''
-weight: 0

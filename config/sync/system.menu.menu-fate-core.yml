@@ -1,8 +1,0 @@
-uuid: 24cc0f1c-d06e-4518-9a0a-ec2e5fc9c46a
-langcode: en
-status: true
-dependencies: {  }
-id: menu-fate-core
-label: 'Fate Core'
-description: ''
-locked: false

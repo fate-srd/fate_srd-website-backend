@@ -1,8 +1,0 @@
-uuid: 1c328bc5-70de-4f15-9de3-3c4bc93216fb
-langcode: en
-status: true
-dependencies: {  }
-id: node__article
-label: 'Content: Article'
-tags:
-  title: '[current-page:title] • [site:name]'
