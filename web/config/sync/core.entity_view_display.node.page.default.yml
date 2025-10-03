@@ -13,7 +13,6 @@ dependencies:
     - user
   enforced:
     module:
-      - recipes_magazin
 _core:
   default_config_hash: Y2J76ns1ZuGqsWFhB4L_pTVNxVf1c_GnwtpLeHJtq3U
 id: node.page.default

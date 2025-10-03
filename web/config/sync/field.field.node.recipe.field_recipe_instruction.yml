@@ -9,7 +9,6 @@ dependencies:
     - text
   enforced:
     module:
-      - recipes_magazin
 _core:
   default_config_hash: 1ITR3OMtQz5oiHqhrdVfiWFV_P3ZpMfuuSHjNbpuwXg
 id: node.recipe.field_recipe_instruction

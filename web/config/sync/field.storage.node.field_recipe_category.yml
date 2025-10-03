@@ -7,7 +7,6 @@ dependencies:
     - taxonomy
   enforced:
     module:
-      - recipes_magazin
 _core:
   default_config_hash: 0RRz4j0Sq_376zZmORlY13zGZosNg6dwGwTPFHsP7sg
 id: node.field_recipe_category

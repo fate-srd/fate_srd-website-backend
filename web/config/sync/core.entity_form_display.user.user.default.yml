@@ -10,7 +10,6 @@ dependencies:
     - user
   enforced:
     module:
-      - recipes_magazin
 _core:
   default_config_hash: lN1LGF-bdYJTEjxjmPu3HiOQ57wp0AJUhS277SX5UUY
 id: user.user.default

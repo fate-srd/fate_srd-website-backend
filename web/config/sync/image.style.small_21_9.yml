@@ -5,7 +5,6 @@ dependencies:
   enforced:
     module:
       - image
-      - recipes_magazin
 _core:
   default_config_hash: UfClpqJ90erdnBHkO-Uai4t3ounoFmnSt55s9f9TSuA
 name: small_21_9

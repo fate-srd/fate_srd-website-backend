@@ -9,7 +9,6 @@ dependencies:
     - options
   enforced:
     module:
-      - recipes_magazin
 _core:
   default_config_hash: DcwOHLWBLscOOiOMXsDRflb0xwQj0ZKN6drsGVe5nlU
 id: node.recipe.field_difficulty

@@ -70,7 +70,6 @@ module:
   toolbar: 0
   typed_data: 0
   update: 0
-  upgrade_status: 0
   user: 0
   views: 0
   views_bulk_edit: 0

@@ -5,7 +5,6 @@ dependencies:
   enforced:
     module:
       - image
-      - recipes_magazin
 _core:
   default_config_hash: '-uZGUZoUV5MAhSt3lGb7zH6bd1_Z69L37Clxyz_xTK4'
 name: medium_21_9

@@ -8,7 +8,6 @@ dependencies:
     - taxonomy.vocabulary.tags
   enforced:
     module:
-      - recipes_magazin
 _core:
   default_config_hash: kKIbPsMJj31hNly6_DMomddcyvGmWMZ2Ky9Kv9oQnTE
 id: node.recipe.field_tags

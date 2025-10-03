@@ -5,7 +5,6 @@ dependencies:
   enforced:
     module:
       - image
-      - recipes_magazin
 _core:
   default_config_hash: rDJ3bsHmg4_sL7FDSfmuwsNPGGxQEfxHB7xZExn2tec
 name: large_3_2_768x512

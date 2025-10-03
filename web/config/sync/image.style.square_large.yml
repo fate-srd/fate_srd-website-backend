@@ -5,7 +5,6 @@ dependencies:
   enforced:
     module:
       - image
-      - recipes_magazin
 _core:
   default_config_hash: gsQAWQ8pe2MUnScd5KC_Qu4NHEgtWgpAsip0ohvTG9M
 name: square_large

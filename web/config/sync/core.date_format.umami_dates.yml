@@ -4,7 +4,6 @@ status: true
 dependencies:
   enforced:
     module:
-      - recipes_magazin
 _core:
   default_config_hash: GG-9mZ3v9aDvELA3P7JfgjMW_XxmmssNCIkujCQx-Zc
 id: umami_dates
