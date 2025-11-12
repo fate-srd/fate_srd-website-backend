@@ -61,7 +61,10 @@
         "drush/drush": "^13",
         "drupal/gin": "^5.0",
         "drupal/gin_toolbar": "^3.0",
-        "drupal/gin_login": "^2.1"
+        "drupal/gin_login": "^2.1",
+        "mglaman/composer-drupal-lenient": "^1.0",
+        "drupal/content_export_csv": "^4.8",
+        "drupal/views_data_export": "^1.8"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -109,7 +112,15 @@
             },
             "drupal/menu_normalizer": {
                 "Fix menu problems": "https://www.drupal.org/files/issues/2025-03-28/3495440-normalizer-support.patch"
+            },
+            "drupal/content_export_csv": {
+                "Drupal 11 compatibility": "https://www.drupal.org/files/issues/2024-03-16/content_export_csv.8.x-4.7.rector.patch"
             }
+        },
+        "drupal-lenient": {
+            "allowed-list": [
+                "drupal/content_export_csv"
+            ]
         }
     },
     "config": {
@@ -124,7 +135,8 @@
             "composer/installers": true,
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
-            "tbachert/spi": true
+            "tbachert/spi": true,
+            "mglaman/composer-drupal-lenient": true
         },
         "platform": {
             "php": "8.3.25"
