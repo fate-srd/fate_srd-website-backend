@@ -8,6 +8,7 @@ web/modules/contrib
 web/themes/contrib
 web/profiles/contrib
 .env.local
+scripts/.env.db
 
 # Ignore Drupal's file directory
 web/sites/default/files

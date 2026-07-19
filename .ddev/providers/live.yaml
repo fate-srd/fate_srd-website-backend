@@ -1,0 +1,22 @@
+# Pull the live DreamHost database into DDEV.
+#
+# Prerequisites:
+#   1. scripts/.env.db exists (cp scripts/.env.db.example scripts/.env.db)
+#   2. SSH access to the live host works from your machine
+#
+# Usage:
+#   ddev pull live --skip-files -y
+#   ./scripts/download-db.sh
+
+# No push stanza on purpose — pushing to production is dangerous.
+
+db_pull_command:
+  service: host
+  command: |
+    set -eu -o pipefail
+    "${DDEV_APPROOT}/scripts/download-db-dump.sh"
+
+# Files are not pulled; always use --skip-files (or this no-op).
+files_pull_command:
+  service: host
+  command: "true"
