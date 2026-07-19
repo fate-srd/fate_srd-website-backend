@@ -20,13 +20,13 @@
         }
     },
     "require": {
-        "drupal/core-composer-scaffold": "11.2.5",
-        "drupal/core-project-message": "11.2.5",
+        "drupal/core-composer-scaffold": "11.4.4",
+        "drupal/core-project-message": "11.4.4",
         "drupal/pathauto": "^1.8",
         "vlucas/phpdotenv": "^5.4",
         "cweagans/composer-patches": "^1.7",
         "drupal/menu_pager": "^3.0",
-        "drupal/pathologic": "^2.0@alpha",
+        "drupal/pathologic": "^2.0",
         "drupal/jsonapi_views": "^1.0",
         "drupal/menu_normalizer": "^2.1",
         "drupal/typed_data": "^2.1",
@@ -47,7 +47,7 @@
         "drupal/admin_toolbar": "^3.1",
         "drupal/next": "^2.0",
         "drupal/graphql": "^4.3",
-        "drupal/inline_entity_form": "^3.0@RC",
+        "drupal/inline_entity_form": "^3.0",
         "drupal/jsonapi_menu_items": "^1.2",
         "drupal/linkit": "^7.0",
         "drupal/metatag_ai": "^1.0",
@@ -57,7 +57,7 @@
         "drupal/openapi_ui_redoc": "^1.0@RC",
         "drupal/single_content_sync": "^1.4",
         "consolidation/site-alias": "^4",
-        "drupal/core-recommended": "11.2.5",
+        "drupal/core-recommended": "11.4.4",
         "drush/drush": "^13",
         "drupal/gin": "^5.0",
         "drupal/gin_toolbar": "^3.0",
@@ -112,15 +112,10 @@
             },
             "drupal/menu_normalizer": {
                 "Fix menu problems": "https://www.drupal.org/files/issues/2025-03-28/3495440-normalizer-support.patch"
-            },
-            "drupal/content_export_csv": {
-                "Drupal 11 compatibility": "https://www.drupal.org/files/issues/2024-03-16/content_export_csv.8.x-4.7.rector.patch"
             }
         },
         "drupal-lenient": {
-            "allowed-list": [
-                "drupal/content_export_csv"
-            ]
+            "allowed-list": []
         }
     },
     "config": {
@@ -136,13 +131,14 @@
             "php-http/discovery": true,
             "phpstan/extension-installer": true,
             "tbachert/spi": true,
-            "mglaman/composer-drupal-lenient": true
+            "mglaman/composer-drupal-lenient": true,
+            "symfony/runtime": true
         },
         "platform": {
             "php": "8.3.25"
         }
     },
     "require-dev": {
-        "drupal/core-dev": "^11"
+        "drupal/core-dev": "^11.4"
     }
 }
