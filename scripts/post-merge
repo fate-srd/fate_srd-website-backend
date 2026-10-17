@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Git post-merge hook. Installed by scripts/install-deploy-hook.sh.
+set -euo pipefail
+
+ROOT_DIR="$(git rev-parse --show-toplevel)"
+exec "${ROOT_DIR}/scripts/deploy.sh"
