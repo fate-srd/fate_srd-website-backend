@@ -20,8 +20,8 @@
         }
     },
     "require": {
-        "drupal/core-composer-scaffold": "11.4.4",
-        "drupal/core-project-message": "11.4.4",
+        "drupal/core-composer-scaffold": "11.4.10",
+        "drupal/core-project-message": "11.4.10",
         "drupal/pathauto": "^1.8",
         "vlucas/phpdotenv": "^5.4",
         "cweagans/composer-patches": "^1.7",
@@ -36,7 +36,7 @@
         "webflo/drupal-finder": "^1.2",
         "webmozart/path-util": "^2.3",
         "drupal/simple_oauth": "^6.0",
-        "league/commonmark": "^1",
+        "league/commonmark": "^2.10",
         "drupal/consumer_image_styles": "^4.0",
         "drupal/decoupled_router": "^2.0",
         "drupal/metatag": "^2.2",
@@ -46,7 +46,7 @@
         "drupal/environment_indicator": "^4.0",
         "drupal/admin_toolbar": "^3.1",
         "drupal/next": "^2.0",
-        "drupal/graphql": "^4.3",
+        "drupal/graphql": "^5.1",
         "drupal/inline_entity_form": "^3.0",
         "drupal/jsonapi_menu_items": "^1.2",
         "drupal/linkit": "^7.0",
@@ -57,7 +57,7 @@
         "drupal/openapi_ui_redoc": "^1.0@RC",
         "drupal/single_content_sync": "^1.4",
         "consolidation/site-alias": "^4",
-        "drupal/core-recommended": "11.4.4",
+        "drupal/core-recommended": "11.4.10",
         "drush/drush": "^13",
         "drupal/gin": "^5.0",
         "drupal/gin_toolbar": "^3.0",
@@ -109,9 +109,6 @@
             "drupal/jsonapi": {
                 "Fix menu problems": "https://www.drupal.org/files/issues/2020-05-13/2915792-47.patch",
                 "Fix menu problems more": "https://www.drupal.org/files/issues/2020-05-19/3066751-32-with_issue_2915792.patch"
-            },
-            "drupal/menu_normalizer": {
-                "Fix menu problems": "https://www.drupal.org/files/issues/2025-03-28/3495440-normalizer-support.patch"
             }
         },
         "drupal-lenient": {
