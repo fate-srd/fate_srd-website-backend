@@ -1,0 +1,22 @@
+uuid: dba99223-7c64-4acd-8979-0d13807a392a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.app
+id: node.app.promote
+field_name: promote
+entity_type: node
+bundle: app
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,22 @@
+uuid: dec6c53a-10ea-457b-9a25-731aa80972b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.fate_books
+id: node.fate_books.promote
+field_name: promote
+entity_type: node
+bundle: fate_books
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

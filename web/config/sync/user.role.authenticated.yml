@@ -24,6 +24,7 @@ permissions:
   - 'administer nodes'
   - 'administer site configuration'
   - 'delete own files'
+  - 'rebuild node access permissions'
   - 'use text format basic_html'
   - 'use text format filtered_html'
   - 'use text format full_html'

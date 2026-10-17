@@ -8,6 +8,7 @@ dependencies:
     - core.entity_view_mode.media.token
   module:
     - editor
+    - linkit
     - media
     - pathologic
 name: 'Full HTML'
@@ -44,7 +45,7 @@ filters:
     status: false
     weight: -41
     settings:
-      allowed_html: '<span class="aspect">'
+      allowed_html: ''
       filter_html_help: true
       filter_html_nofollow: false
   filter_html_escape:
@@ -89,6 +90,14 @@ filters:
     weight: -45
     settings:
       filter_url_length: 72
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true
+      media_substitution: metadata
   media_embed:
     id: media_embed
     provider: media
