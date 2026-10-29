@@ -20,8 +20,8 @@
         }
     },
     "require": {
-        "drupal/core-composer-scaffold": "11.4.10",
-        "drupal/core-project-message": "11.4.10",
+        "drupal/core-composer-scaffold": "11.4.11",
+        "drupal/core-project-message": "11.4.11",
         "drupal/pathauto": "^1.8",
         "vlucas/phpdotenv": "^5.4",
         "cweagans/composer-patches": "^1.7",
@@ -57,7 +57,7 @@
         "drupal/openapi_ui_redoc": "^1.0@RC",
         "drupal/single_content_sync": "^1.4",
         "consolidation/site-alias": "^4",
-        "drupal/core-recommended": "11.4.10",
+        "drupal/core-recommended": "11.4.11",
         "drush/drush": "^13",
         "drupal/gin": "^5.0",
         "drupal/gin_toolbar": "^3.0",
