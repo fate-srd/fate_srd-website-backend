@@ -10,7 +10,7 @@ third_party_settings:
 name: 'Fate products'
 type: fate_books
 description: 'This content type is for listing Fate products on the site.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 1
 display_submitted: false

@@ -9,5 +9,6 @@ _core:
   default_config_hash: eJtiQxlj8jDnKrggwOLwv5iGNPOSEfETrNxHV2fvG2U
 name: 'Recipe category'
 vid: recipe_category
-description: ''
+description: null
 weight: 0
+new_revision: false

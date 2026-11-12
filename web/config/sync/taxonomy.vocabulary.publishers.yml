@@ -6,3 +6,4 @@ name: Publishers
 vid: publishers
 description: 'This is a list of Fate publishers.'
 weight: 0
+new_revision: false

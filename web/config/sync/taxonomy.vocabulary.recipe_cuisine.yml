@@ -9,5 +9,6 @@ _core:
   default_config_hash: TtVgi6-7vGCp3_t2kELTQ4btSN4W30aEgvnfgRjO_SY
 name: 'Recipe cuisine'
 vid: recipe_cuisine
-description: ''
+description: null
 weight: 0
+new_revision: false
