@@ -4,5 +4,6 @@ status: true
 dependencies: {  }
 name: 'Fate Ruleset Version'
 vid: fate_version
-description: ''
+description: null
 weight: 0
+new_revision: false

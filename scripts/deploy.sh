@@ -28,5 +28,10 @@ fi
 echo "Installing Composer dependencies..."
 composer install --no-dev --optimize-autoloader --no-interaction
 
+# Drupal 11 removed these post-updates. Record them before updatedb, which
+# otherwise stops when the database skipped the releases that contained them.
+echo "Repairing removed Drupal post-updates..."
+vendor/bin/drush php:script scripts/repair-removed-post-updates.php
+
 echo "Running Drupal deploy..."
 vendor/bin/drush deploy -y

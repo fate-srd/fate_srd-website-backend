@@ -16,7 +16,7 @@ _core:
 name: Tutorial
 type: tutorial
 description: 'A brief wrapper on external documentation for a particular piece in Contenta CMS.'
-help: ''
+help: null
 new_revision: false
 preview_mode: 0
 display_submitted: false

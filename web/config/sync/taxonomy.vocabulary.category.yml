@@ -9,5 +9,6 @@ _core:
   default_config_hash: xxcjX6pBiiIcnr0DJAHV7iT_xUzThaCM6AaJ5ejC6xk
 name: Category
 vid: category
-description: ''
+description: null
 weight: 0
+new_revision: false

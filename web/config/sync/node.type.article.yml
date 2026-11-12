@@ -35,7 +35,7 @@ _core:
 name: Article
 type: article
 description: 'Articles are the the content type used for entering Fate rules pages, e.g. Fate Core, FAE, or the System Toolkit.'
-help: ''
+help: null
 new_revision: true
 preview_mode: 0
 display_submitted: false
